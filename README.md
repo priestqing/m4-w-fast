@@ -1,5 +1,7 @@
 # m4文件绘图程序
 
+![img.png](img.png)
+
 ### 更新说明
 - v1.0.1: 修复了安装在vite环境打包时woker不正常工作的问题
 - v1.0.2: 新增了一个可以单独获取某一个break的等值面方法 `getIsoBandsByLayerBreak(breaks: number[], break: number)`
