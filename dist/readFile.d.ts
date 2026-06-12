@@ -57,27 +57,6 @@ export declare class readFileM4 implements IReadFileM4 {
      */
     clipDataByJson(iosBands: FeatureCollection, json: FeatureCollection, intersectWorkerUrl: string, useCpuCount?: number): Promise<import("@turf/helpers").FeatureCollection<Polygon | MultiPolygon, import("geojson").GeoJsonProperties>>;
     /**
-     * 使用 Worker 多线程获取等值带
-     * @param breaks 等值带分级
-     * @param bandsWorkerUrl 等值带计算 Worker 脚本 URL
-     * @param useCpuCount 可选，使用的 CPU 核心数
-     * @deprecated 即将弃用, 请使用 `getIsoBandsFast`
-     */
-    getIsoBandsFastByWorker(breaks: number[], bandsWorkerUrl: string, useCpuCount?: number): Promise<FeatureCollection>;
-    /**
-     * 清理等值带缓存 (缓存只在 getIsoBandsByLayerBreak 方法中使用)
-     * @deprecated 准备弃用, 分层使用canvas来做
-     */
-    clearMaskCache(): void;
-    /**
-     * 获取等值带 (支持按层获取或全部层合并获取)
-     *  - 单层因为数据丢失可能不准确
-     * @param breaks
-     * @param layerLower
-     * @deprecated 准备弃用, 分层使用canvas来做
-     */
-    getIsoBandsByLayerBreak(breaks?: number[], layerLower?: number): FeatureCollection;
-    /**
      * 获取 JSON 数据数组
      * @return JSONData[]
      */
@@ -96,13 +75,6 @@ export declare class readFileM4 implements IReadFileM4 {
      * @private
      */
     private getMinMax;
-    /**
-     * 按面积排序
-     * @param fc
-     * @private
-     * @deprecated 准备弃用, 分层使用canvas来做, 绘图方式也变了, 不需要面积排序了
-     */
-    private sortFeaturesByArea;
     /**
      * 数组分块
      * @param arr
