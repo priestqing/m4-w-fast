@@ -1,6 +1,7 @@
 import type { FeatureCollection, Polygon, MultiPolygon } from 'geojson';
 import type { IReadFileM4, ReadConfig, ParamsConfig, JSONData, CanvasOptions, Point } from './types';
-import * as L from 'leaflet';
+import type * as L from 'leaflet';
+import type { M4LeafletLayer, M4LeafletLayerInputOptions } from './leaflet/types';
 export declare class readFileM4 implements IReadFileM4 {
     filePath: string;
     nx: number;
@@ -28,6 +29,11 @@ export declare class readFileM4 implements IReadFileM4 {
      * @param config
      */
     setParams(params: ParamsConfig, config?: ReadConfig): void;
+    /**
+     * 创建 Leaflet 图层, 这里只输出图层对象, 不负责挂载到底图
+     * @param options
+     */
+    createLeafletLayer(options: M4LeafletLayerInputOptions): M4LeafletLayer;
     /**
      * 获取等值带
      * @param breaks

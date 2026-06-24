@@ -41,7 +41,11 @@
   - 修复了在 `vite8` 环境下的验证问题, 导出更加严格
 - v1.0.12
   - 新增 `getIsoBandsFastByMask(breaks: number[])` 方法, 和`getIsoBandsFast()`方法类似, 区别在于他做了数据挖孔, 可以给图层设置透明度而不影响图层的叠加效果
-  
+- v1.0.13
+  - 新增了基于`leaflet` + `webgl2`的绘图方案, 这个方案可以使用`tif`, `micaps4`, `setParams()`的方式获取到一个图层, 图层在变化的时候会进行重采样和插值, 理论上可以流畅的过滤数据或者放大不虚
+  - 后续计划增加`AMap`, `webgl`, `webgpu`方案. 
+  - 裁剪数据也在计划中, 目前已知裁图在边界上会有锯齿状的边缘
+
 ### 类型参照
 > ReadConfig
 
@@ -201,6 +205,53 @@ read.setParams({
     gjLat: dataGjLat
 })
 
+```
+
+### leaflet图层 
+- 理论上可以流畅的过滤数据或者放大不虚, 这可能是当前包体中显示最优的方案
+
+```ts
+const grid = await loadRasterGrid({
+  type: 'tif',
+  url: 'xxx'
+})
+
+// micaps4
+// const grid = await loadRasterGrid({
+//   type: 'micaps4',
+//   url: 'xxx'
+// })
+
+// params
+// const grid = await loadRasterGrid({
+//     type: 'params',
+//     params: {
+//         values: Array.from({ length: 512 * 256 }, () => Math.random() * 60 - 30),
+//         nx: 512,
+//         ny: 256,
+//         minLng: 70,
+//         minLat: 15,
+//         gjLng: 0.1,
+//         gjLat: 0.1,
+//         flipY: true, //是否翻转数据
+//         valueScale: 1
+//     }
+// })
+
+const layer = createRasterLeafletLayer({
+  rendererType: 'webgl2',
+  grid,
+  colorStops: legend,   // {min: number, max:number, color: string}[]
+  colorRange: {
+    minValue: Number(minInput.value),   // 过滤的最小值
+    maxValue: Number(maxInput.value)    // 过滤的最大值
+  },
+  opacity: 1,
+  renderMode: 'step',
+  pane: 'raster-pane'
+})
+
+// layer.setColorRange({ minValue, maxValue }) 动态变化
 ```
 
 #### @author: wangrl
