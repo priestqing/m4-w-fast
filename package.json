@@ -13,7 +13,13 @@
             "types": "./dist/index.d.ts"
         },
         "./isoBands.worker.js": "./dist/isoBands.worker.js",
-        "./intersect.worker.js": "./dist/intersect.worker.js"
+        "./intersect.worker.js": "./dist/intersect.worker.js",
+        "./raster-overlay": {
+            "types": "./dist/raster-overlay/index.d.ts",
+            "import": "./dist/raster-overlay/index.mjs",
+            "require": "./dist/raster-overlay/index.cjs",
+            "default": "./dist/raster-overlay/index.mjs"
+        }
     },
     "scripts": {
         "build:types": "tsc -p tsconfig.build.json",
@@ -49,7 +55,8 @@
     "homepage": "https://github.com/priestqing/m4-w-fast#readme",
     "peerDependencies": {
         "@turf/turf": "^6.5.0",
-        "d3-contour": "^4"
+        "d3-contour": "^4",
+        "leaflet": "^1.9.4"
     },
     "dependencies": {
         "@turf/area": "^7.2.0",
@@ -59,7 +66,8 @@
         "@turf/turf": "^6.5.0",
         "@types/leaflet": "^1.9.21",
         "d3-contour": "^4",
-        "decimal.js": "^10.6.0"
+        "decimal.js": "^10.6.0",
+        "geotiff": "3.0.5"
     },
     "devDependencies": {
         "@rollup/plugin-commonjs": "^29.0.0",
