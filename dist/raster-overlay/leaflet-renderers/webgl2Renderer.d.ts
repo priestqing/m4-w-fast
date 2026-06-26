@@ -1,5 +1,8 @@
 import type { RasterColorRange, RasterColorStop, RasterGrid, RasterRenderMode, RasterRendererCreateOptions } from '../types';
-import type { RasterLeafletRenderer, RasterLeafletRenderViewport } from './renderer';
+import type { RasterLeafletCrs, RasterLeafletRenderer, RasterLeafletRenderViewport } from './renderer';
+/**
+ * WebGL2 栅格渲染器，负责纹理上传、Shader 编译和视口绘制
+ */
 export declare class Webgl2Renderer implements RasterLeafletRenderer {
     private gl;
     private grid;
@@ -28,16 +31,47 @@ export declare class Webgl2Renderer implements RasterLeafletRenderer {
     private canvas;
     private contextLost;
     private lastViewport;
+    private crs;
     constructor(options: RasterRendererCreateOptions);
-    initialize(canvas: HTMLCanvasElement): void;
+    /**
+     * 初始化 WebGL2 渲染器
+     * @param canvas 渲染目标画布
+     * @param crs 坐标参考系统
+     */
+    initialize(canvas: HTMLCanvasElement, crs: RasterLeafletCrs | null): void;
+    /**
+     * 根据当前 Leaflet 视口绘制栅格图层
+     * @param viewport 当前视口信息
+     */
     render(viewport: RasterLeafletRenderViewport): void;
+    /**
+     * 更新栅格数据并重新上传纹理
+     * @param grid 栅格数据
+     */
     setGrid(grid: RasterGrid): void;
+    /**
+     * 更新色标配置，并在容量变化时重建 Shader 程序
+     * @param colorStops 归一化后的色标配置
+     */
     setColorStops(colorStops: RasterColorStop[]): void;
     setColorRange(colorRange: RasterColorRange): void;
     setOpacity(opacity: number): void;
     setRenderMode(renderMode: RasterRenderMode): void;
     destroy(): void;
+    /**
+     * 创建 WebGL2 程序、缓冲区和 uniform 引用
+     * @param gl WebGL2 渲染上下文
+     * @param crs 坐标参考系统
+     * @private
+     */
     private createProgram;
+    /**
+     * 创建并编译指定类型的 Shader
+     * @param gl WebGL2 上下文
+     * @param type  Shader 类型
+     * @param source Shader 源码
+     * @private
+     */
     private createShader;
     /**
      * 上传栅格数据为WebGL2单通道浮点纹理

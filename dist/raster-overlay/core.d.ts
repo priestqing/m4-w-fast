@@ -5,6 +5,11 @@ import type { RasterGrid, RasterLoadOptions, RasterParams, RasterSource } from '
  * @param options
  */
 export declare const createGridFromParams: (params: RasterParams, options?: RasterLoadOptions) => RasterGrid;
+/**
+ * 解析 MICAPS4 文本内容并转换为统一栅格数据
+ * @param text
+ * @param options
+ */
 export declare const parseMicaps4Text: (text: string, options?: RasterLoadOptions) => RasterGrid;
 /**
  * 从URL加载M4文件
@@ -21,9 +26,9 @@ export declare const loadTifGrid: (url: string, options?: RasterLoadOptions) => 
 /**
  * 根据数据源加载统一的栅格数据
  * @param source
- * @param optiosn
+ * @param options
  */
-export declare const loadRasterGrid: (source: RasterSource, optiosn?: RasterLoadOptions) => Promise<RasterGrid>;
+export declare const loadRasterGrid: (source: RasterSource, options?: RasterLoadOptions) => Promise<RasterGrid>;
 /**
  * 验证栅格数据的合法性
  * @param grid

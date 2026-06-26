@@ -1,5 +1,4 @@
 import type { FeatureCollection } from 'geojson';
-import type { M4LeafletLayer, M4LeafletLayerInputOptions } from './leaflet/types';
 export interface IReadFileM4 {
     filePath: string;
     nx: number;
@@ -22,11 +21,6 @@ export interface IReadFileM4 {
      * @param config
      */
     setParams: (params: ParamsConfig, config?: ReadConfig) => void;
-    /**
-     * 创建 Leaflet 栅格图层, 调用方自行 addTo(map)
-     * @param options
-     */
-    createLeafletLayer: (options: M4LeafletLayerInputOptions) => M4LeafletLayer;
     /**
      * 获取等值带
      * @param breaks

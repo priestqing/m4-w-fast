@@ -1,5 +1,9 @@
 import type { RasterColorRange, RasterColorStop, RasterGrid, RasterRenderMode } from '../types';
 /**
+ * Leaflet 内置坐标系标识，仅供渲染器内部使用
+ */
+export type RasterLeafletCrs = 'epsg3857' | 'epsg4326' | 'epsg3395' | 'simple';
+/**
  * leaflet图层传递给渲染器的当前视口
  */
 export interface RasterLeafletRenderViewport {
@@ -19,7 +23,7 @@ export interface RasterLeafletRenderer {
     /**
      * 初始化上下文和基础绘制资源
      */
-    initialize: (canvas: HTMLCanvasElement) => void | Promise<void>;
+    initialize: (canvas: HTMLCanvasElement, crs: RasterLeafletCrs | null) => void | Promise<void>;
     /**
      * 渲染当前视口
      */
