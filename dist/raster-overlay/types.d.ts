@@ -1,3 +1,4 @@
+import type * as L from 'leaflet';
 /**
  * 栅格图层支持的渲染方案
  */
@@ -7,7 +8,13 @@ export type RasterRendererType = 'cpu' | 'webgl' | 'webgl2' | 'webgpu';
  * - step: 分段式
  * - smooth: 平滑
  */
-export type RasterRenderMode = 'step' | 'smooth';
+export type RasterColorMode = 'step' | 'smooth';
+/**
+ * 栅格空间采样模式
+ * - interpolate: 双线性插值采样
+ * - cell: 单元格采样
+ */
+export type RasterSampleMode = 'interpolate' | 'cell';
 /**
  * 外部传入色标配置
  */
@@ -51,7 +58,14 @@ export interface RasterColorRange {
 export interface RasterRenderOptions {
     colorRange?: RasterColorRange;
     opacity?: number;
-    renderMode?: RasterRenderMode;
+    /**
+     * 颜色映射模式
+     */
+    colorMode?: RasterColorMode;
+    /**
+     * 栅格空间采样模式
+     */
+    sampleMode?: RasterSampleMode;
 }
 /**
  * 渲染器初始化所需配置
@@ -67,6 +81,9 @@ export interface RasterLeafletLayerCreateOptions extends RasterRendererCreateOpt
     colorStops: RasterColorStopInput[];
     pane?: string;
     rendererType: RasterRendererType;
+    onHover?: RasterQueryCallback;
+    onClick?: RasterQueryCallback;
+    tooltip?: RasterTooltipOptions;
 }
 /**
  * 创建栅格数据所需参数
@@ -111,4 +128,108 @@ export interface RasterLoadOptions {
     flipY?: boolean;
     noData?: number;
     valueScale?: number;
+}
+/**
+ * Raster query result reason
+ * 栅格查询结果原因
+ */
+export type RasterQueryReason = 'ok' | 'no-data' | 'out-of-bounds' | 'out-of-range';
+/**
+ * Raster query coordinate
+ * 栅格查询坐标 (考虑到 crs -> simple 这里统一用 x,y 不用 lng,lat )
+ */
+export interface RasterQueryPoint {
+    x: number;
+    y: number;
+}
+/**
+ * Raster query result
+ * 栅格查询结果
+ */
+export interface RasterQueryResult {
+    x: number;
+    y: number;
+    /**
+     * 原始栅格值
+     */
+    rawValue: number;
+    /**
+     * 栅格值 (正常数据时等于 rawValue * valueScale)
+     */
+    value: number;
+    /**
+     * 当前栅格缩放值
+     */
+    valueScale: number;
+    /**
+     * 栅格网格 X 坐标
+     */
+    gridX: number;
+    /**
+     * 栅格网格 Y 坐标
+     */
+    gridY: number;
+    /**
+     * 是否有效业务数据
+     */
+    valid: boolean;
+    /**
+     * 是否能被当前 colorRange 显示
+     */
+    visible: boolean;
+    /**
+     * 查询结果原因, 解释为什么有效/无效/不可见
+     */
+    reason: RasterQueryReason;
+}
+/**
+ * Raster query options
+ * 栅格查询配置
+ */
+export interface RasterQueryOptions {
+    /**
+     * Visible value range, matching the renderer's color range.
+     * 当前可见值范围, 和渲染器使用的色标范围保持一致
+     */
+    colorRange?: RasterColorRange | null;
+    /**
+     * Sampling mode used by query, matching the renderer's sample mode.
+     * 查询使用的采样模式, 和渲染器采样模式保持一致
+     */
+    sampleMode?: RasterSampleMode;
+}
+/**
+ * Raster interaction callback.
+ * 栅格交互回调
+ */
+export type RasterQueryCallback = (result: RasterQueryResult) => void;
+/**
+ * Raster query leaflet event.
+ * 栅格查询 Leaflet 事件对象
+ */
+export interface RasterQueryEvent extends L.LeafletEvent {
+    result: RasterQueryResult;
+    latlng: L.LatLng;
+    originalEvent: MouseEvent;
+}
+/**
+ * Raster tooltip options.
+ * 栅格 tooltip 配置, 只控制内置 UI
+ */
+export interface RasterTooltipOptions {
+    /**
+     * Whether built-in tooltip is enabled.
+     * 是否启用内置 tooltip
+     */
+    enabled?: boolean;
+    /**
+     * Tooltip display position.
+     * tooltip显示位置, follow 跟随鼠标, fixed 固定在地图左下角
+     */
+    position?: 'follow' | 'fixed';
+    /**
+     * Format tooltip content.
+     * 格式化 tooltip 内容
+     */
+    formatter?: (result: RasterQueryResult) => string;
 }

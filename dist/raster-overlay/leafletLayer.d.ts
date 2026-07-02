@@ -1,5 +1,5 @@
 import * as L from 'leaflet';
-import type { RasterColorRange, RasterColorStopInput, RasterGrid, RasterLeafletLayerCreateOptions, RasterParams, RasterRenderMode, RasterSource } from './types';
+import type { RasterColorRange, RasterColorStopInput, RasterGrid, RasterLeafletLayerCreateOptions, RasterParams, RasterSource, RasterColorMode, RasterSampleMode, RasterQueryPoint, RasterQueryResult } from './types';
 export interface RasterLeafletLayer extends L.Layer {
     /**
      * 使用直接参数更新栅格数据
@@ -23,10 +23,15 @@ export interface RasterLeafletLayer extends L.Layer {
      */
     setColorRange: (range: RasterColorRange) => void;
     /**
-     * 更新渲染模式
-     * @param renderMode
+     * 更新颜色映射模式
+     * @param colorMode
      */
-    setRenderMode: (renderMode: RasterRenderMode) => void;
+    setColorMode: (colorMode: RasterColorMode) => void;
+    /**
+     * 更新栅格空间采样模式
+     * @param sampleMode
+     */
+    setSampleMode: (sampleMode: RasterSampleMode) => void;
     /**
      * 更新图层透明度
      * @param opacity
@@ -40,6 +45,16 @@ export interface RasterLeafletLayer extends L.Layer {
      * 更新外部字符串色标配置
      */
     setColorStops: (colorStops: RasterColorStopInput[]) => void;
+    /**
+     * Query the raster value at a normalized x/y coordinate.
+     * 按统一的 x/y 坐标查询栅格值
+     */
+    queryValueAt: (point: RasterQueryPoint) => RasterQueryResult;
+    /**
+     * Query the raster value at a Leaflet latLng.
+     * 按 Leaflet 的经纬度查询栅格值
+     */
+    queryValueAtLatLng: (latLng: L.LatLngExpression) => RasterQueryResult;
 }
 /**
  * leaflet 栅格图层工厂函数

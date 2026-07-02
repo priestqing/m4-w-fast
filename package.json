@@ -65,6 +65,7 @@
         "@turf/isolines": "^7.2.0",
         "@turf/turf": "^6.5.0",
         "@types/leaflet": "^1.9.21",
+        "@webgpu/types": "^0.1.71",
         "d3-contour": "^4",
         "decimal.js": "^10.6.0",
         "geotiff": "3.0.5"

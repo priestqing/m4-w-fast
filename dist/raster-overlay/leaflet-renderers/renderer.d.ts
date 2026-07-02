@@ -1,4 +1,4 @@
-import type { RasterColorRange, RasterColorStop, RasterGrid, RasterRenderMode } from '../types';
+import type { RasterColorRange, RasterColorStop, RasterGrid, RasterColorMode, RasterSampleMode } from '../types';
 /**
  * Leaflet 内置坐标系标识，仅供渲染器内部使用
  */
@@ -45,9 +45,13 @@ export interface RasterLeafletRenderer {
      */
     setOpacity: (opacity: number) => void;
     /**
-     * 更新渲染模式
+     * 更新颜色映射模式
      */
-    setRenderMode: (renderMode: RasterRenderMode) => void;
+    setColorMode: (colorMode: RasterColorMode) => void;
+    /**
+     * 更新栅格空间采样模式
+     */
+    setSampleMode: (sampleMode: RasterSampleMode) => void;
     /**
      * 销毁渲染器, 释放资源
      */

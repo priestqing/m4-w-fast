@@ -1,4 +1,4 @@
-import type { RasterColorRange, RasterColorStop, RasterGrid, RasterRenderMode, RasterRendererCreateOptions } from '../types';
+import type { RasterColorRange, RasterColorStop, RasterGrid, RasterRendererCreateOptions, RasterColorMode, RasterSampleMode } from '../types';
 import type { RasterLeafletCrs, RasterLeafletRenderer, RasterLeafletRenderViewport } from './renderer';
 /**
  * WebGL2 栅格渲染器，负责纹理上传、Shader 编译和视口绘制
@@ -27,7 +27,8 @@ export declare class Webgl2Renderer implements RasterLeafletRenderer {
     private colorStopColors;
     private maxColorStops;
     private opacity;
-    private renderMode;
+    private colorMode;
+    private sampleMode;
     private canvas;
     private contextLost;
     private lastViewport;
@@ -56,7 +57,8 @@ export declare class Webgl2Renderer implements RasterLeafletRenderer {
     setColorStops(colorStops: RasterColorStop[]): void;
     setColorRange(colorRange: RasterColorRange): void;
     setOpacity(opacity: number): void;
-    setRenderMode(renderMode: RasterRenderMode): void;
+    setColorMode(colorMode: RasterColorMode): void;
+    setSampleMode(sampleMode: RasterSampleMode): void;
     destroy(): void;
     /**
      * 创建 WebGL2 程序、缓冲区和 uniform 引用
@@ -101,6 +103,7 @@ export declare class Webgl2Renderer implements RasterLeafletRenderer {
      */
     private readonly handleContextRestored;
     /**
+     * Update color stop arrays used by shader uploads.
      * 将色标配置写入可直接上传到Shader的数组
      * @private
      */
