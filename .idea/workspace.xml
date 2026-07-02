@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="fc571816-3e29-403f-8ed7-2aa08c51dd8c" name="更改" comment="1.1.0" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CopilotPersistence">
+    <persistenceIdMap>
+      <entry key="_C:/Users/P/Desktop/git-gitlab/m4-w-fast" value="3F1JYAw09h7liNwa58cdG2FV9r7" />
+    </persistenceIdMap>
+  </component>
+  <component name="EmbeddingIndexingInfo">
+    <option name="cachedIndexableFilesCount" value="25" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;priestqing&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/priestqing/m4-w-fast.git&quot;,
+    &quot;accountId&quot;: &quot;15439f3c-c6c3-43fb-91eb-fca1f2c0402b&quot;
+  }
+}</component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="5.651887302075322E-129" />
+      <entry key="MS500" value="2.4673759075019426E-26" />
+      <entry key="S2" value="7.787213889185382E-7" />
+      <entry key="S5" value="0.01054757260050673" />
+      <entry key="S10" value="0.3273348479015045" />
+      <entry key="S30" value="3.690926243179596" />
+      <entry key="S60" value="6.898148560387555" />
+      <entry key="M2" value="9.536333128481886" />
+      <entry key="M5" value="15.219553981432483" />
+      <entry key="M10" value="32.856985477632115" />
+      <entry key="M15" value="52.232020601662704" />
+      <entry key="M30" value="93.51966486367206" />
+      <entry key="H1" value="130.9259364325266" />
+      <entry key="H2" value="157.23418009940283" />
+      <entry key="H4" value="173.28333463365786" />
+      <entry key="D1" value="188.6612243552572" />
+      <entry key="W1" value="191.51711282779252" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0" />
+      <entry key="S2" value="1.0" />
+      <entry key="S5" value="1.0" />
+      <entry key="S10" value="1.0" />
+      <entry key="S30" value="1.0" />
+      <entry key="S60" value="1.0000000045691444" />
+      <entry key="M2" value="1.0001035493846624" />
+      <entry key="M5" value="1.0569119014354917" />
+      <entry key="M10" value="1.5666652085573602" />
+      <entry key="M15" value="2.273577947266032" />
+      <entry key="M30" value="3.9547274485769655" />
+      <entry key="H1" value="5.636947013877738" />
+      <entry key="H2" value="6.961711089390076" />
+      <entry key="H4" value="7.855422083570224" />
+      <entry key="D1" value="8.787064576932003" />
+      <entry key="W1" value="8.968959161239525" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="4.722793559394502E-5" />
+      <entry key="MS500" value="0.13640798463186687" />
+      <entry key="S2" value="0.6077296322597495" />
+      <entry key="S5" value="0.8292152301002006" />
+      <entry key="S10" value="1.2213788911533427" />
+      <entry key="S30" value="4.615079370387698" />
+      <entry key="S60" value="7.840829728610185" />
+      <entry key="M2" value="10.49995118308746" />
+      <entry key="M5" value="16.258104594931805" />
+      <entry key="M10" value="34.40920104076111" />
+      <entry key="M15" value="54.49190615912606" />
+      <entry key="M30" value="97.46318415005494" />
+      <entry key="H1" value="136.55531011974728" />
+      <entry key="H2" value="164.19141467977482" />
+      <entry key="H4" value="181.13630842929786" />
+      <entry key="D1" value="197.4478473697864" />
+      <entry key="W1" value="200.48600801977648" />
+    </decayedShown>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4,
+  &quot;fromUser&quot;: false
+}</component>
+  <component name="ProjectId" id="3F1JYAw09h7liNwa58cdG2FV9r7" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "copilot.chat.legacySessionMetadata.migrated": "true",
+    "git-widget-placeholder": "gh-pages",
+    "ignore.virus.scanning.warn.message": "true",
+    "javascript.preferred.runtime.type.id": "node",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.stylelint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.stylelint": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "npm.build.executor": "Run",
+    "settings.editor.selected.configurable": "configurable.stylesheets.stylelint",
+    "ts.external.directory.path": "C:\\Users\\P\\Desktop\\git-gitlab\\m4-w-fast\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.build" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-31caf2ab9e3c-JavaScript-WS-261.25134.101" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="fc571816-3e29-403f-8ed7-2aa08c51dd8c" name="更改" comment="" />
+      <created>1778222611903</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1778222611903</updated>
+      <workItem from="1781236687475" duration="1608000" />
+      <workItem from="1781246337435" duration="864000" />
+      <workItem from="1781484666641" duration="655000" />
+      <workItem from="1781516908575" duration="310000" />
+      <workItem from="1782291617122" duration="824000" />
+      <workItem from="1782295177021" duration="345000" />
+      <workItem from="1782441355069" duration="266000" />
+      <workItem from="1782954273490" duration="2495000" />
+    </task>
+    <task id="LOCAL-00001" summary="init">
+      <option name="closed" value="true" />
+      <created>1781237038067</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1781237038067</updated>
+    </task>
+    <task id="LOCAL-00002" summary="1.0.13">
+      <option name="closed" value="true" />
+      <created>1781245133790</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1781245133790</updated>
+    </task>
+    <task id="LOCAL-00003" summary="1.0.13">
+      <option name="closed" value="true" />
+      <created>1781245283259</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1781245283259</updated>
+    </task>
+    <task id="LOCAL-00004" summary="1.0.14">
+      <option name="closed" value="true" />
+      <created>1782292255529</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1782292255529</updated>
+    </task>
+    <task id="LOCAL-00005" summary="1.0.14">
+      <option name="closed" value="true" />
+      <created>1782295494092</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1782295494092</updated>
+    </task>
+    <task id="LOCAL-00006" summary="1.0.16">
+      <option name="closed" value="true" />
+      <created>1782441416585</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1782441416585</updated>
+    </task>
+    <task id="LOCAL-00007" summary="1.1.0">
+      <option name="closed" value="true" />
+      <created>1782954406474</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1782954406474</updated>
+    </task>
+    <task id="LOCAL-00008" summary="1.1.0">
+      <option name="closed" value="true" />
+      <created>1782956262016</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1782956262016</updated>
+    </task>
+    <task id="LOCAL-00009" summary="1.1.0">
+      <option name="closed" value="true" />
+      <created>1782956350550</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1782956350550</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="init" />
+    <MESSAGE value="1.0.13" />
+    <MESSAGE value="1.0.14" />
+    <MESSAGE value="1.0.16" />
+    <MESSAGE value="1.1.0" />
+    <option name="LAST_COMMIT_MESSAGE" value="1.1.0" />
+  </component>
+</project>
