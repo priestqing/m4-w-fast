@@ -1,5 +1,8 @@
 # m4文件绘图程序
 
+[![npm version](https://img.shields.io/npm/v/m4-w-fast.svg)](https://www.npmjs.com/package/m4-w-fast)
+[![npm downloads (monthly)](https://img.shields.io/npm/dm/m4-w-fast.svg)](https://www.npmjs.com/package/m4-w-fast)
+
 [在线 demo](https://priestqing.github.io/m4-w-fast/)
 ---
 ![img_1.png](img_1.png)
