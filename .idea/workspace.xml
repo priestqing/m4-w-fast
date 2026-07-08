@@ -4,23 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fc571816-3e29-403f-8ed7-2aa08c51dd8c" name="更改" comment="1.1.2">
-      <change beforePath="$PROJECT_DIR$/assets/Home-B4TIxSxl.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/Home-B4TIxSxl.js.br" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/Home-B4TIxSxl.js.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/Home-legacy-BZ7zKai5.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/Home-legacy-BZ7zKai5.js.br" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/Home-legacy-BZ7zKai5.js.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/index-DQGIfv5S.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/index-DQGIfv5S.js.br" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/index-DQGIfv5S.js.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/index-legacy-CrwaK42L.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/index-legacy-CrwaK42L.js.br" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/index-legacy-CrwaK42L.js.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html.br" beforeDir="false" afterPath="$PROJECT_DIR$/index.html.br" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html.gz" beforeDir="false" afterPath="$PROJECT_DIR$/index.html.gz" afterDir="false" />
-    </list>
+    <list default="true" id="fc571816-3e29-403f-8ed7-2aa08c51dd8c" name="更改" comment="1.1.2" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -272,7 +256,15 @@
       <option name="project" value="LOCAL" />
       <updated>1783477710826</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="1.1.2">
+      <option name="closed" value="true" />
+      <created>1783478705405</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1783478705405</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
