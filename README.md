@@ -8,6 +8,8 @@
 ![img_1.png](img_1.png)
 
 ### 更新说明
+- v1.1.1
+  - 新增基于 `Leaflet` + `WebGPU` 的道路图层方案, 支持将 `LineString` / `MultiLineString` 道路 GeoJSON 按栅格值着色
 - v1.1.0
   - 正式启动主推 `leaflet canvas图层`方案
   - 现已支持`webgl2`, `webgpu`
@@ -68,8 +70,13 @@ npm i m4-w-fast
 # leaflet canvas图层
 - 理论上可以流畅的过滤数据或者放大不虚, 这可能是当前包体中显示最优的方案
 - 现已支持 webgl2, webgpu
+- UMD 使用 `M4WRasterOverlay`
 
 ```ts
+import { createRasterLeafletLayer, loadRasterGrid } from 'm4-w-fast/raster-overlay'
+
+//...
+
 const grid = await loadRasterGrid({
   type: 'tif',
   url: 'xxx'
@@ -106,7 +113,8 @@ const layer = createRasterLeafletLayer({
     maxValue: Number(maxInput.value)    // 过滤的最大值
   },
   opacity: 1,
-  renderMode: 'step',
+  colorMode: 'step', // 'step' | 'smooth'
+  sampleMode: 'interpolate', // 'interpolate' | 'cell'
   pane: 'raster-pane',
   tooltip: {
       enabled: true,
@@ -128,9 +136,67 @@ layer.on('raster:click', event => {
 
 ```
 
+# 道路 WebGPU 图层
+
+- 用于把道路 GeoJSON 叠加到 Leaflet 地图上, 并根据栅格数据采样值给道路着色
+- 当前道路示例建议使用 `rendererType: 'webgpu'`, 浏览器需要支持 `navigator.gpu`
+- 道路数据支持 `LineString` / `MultiLineString`
+- `grid` 和 `source` 二选一传入, `grid` 可以通过 `loadRasterGrid()` 预加载
+- 如果道路和栅格是 WGS84, 底图使用高德 GCJ-02, 设置 `coordinateTransform: 'wgs84-to-gcj02'`
+- UMD 使用 `M4WRoadOverlay`。
+
+```ts
+import * as L from 'leaflet'
+import { loadRasterGrid } from 'm4-w-fast/raster-overlay'
+import { createRoadLeafletLayer } from 'm4-w-fast/road-overlay'
+import type { RoadGeoJsonInput } from 'm4-w-fast/road-overlay'
+
+const map = L.map('map', {
+    center: [35.97, 103.75],
+    zoom: 11
+})
+
+map.createPane('road-pane')
+
+const roadPane = map.getPane('road-pane')
+
+if (roadPane) {
+    roadPane.style.zIndex = '400'
+}
+
+// 这里是你的道路 GeoJSON, 只支持 LineString / MultiLineString
+const roadsResponse = await fetch('/road.json')
+const roads = await roadsResponse.json() as RoadGeoJsonInput
+
+const grid = await loadRasterGrid({
+    type: 'micaps4',
+    url: '/2510270910.015'
+})
+
+const roadLayer = await createRoadLeafletLayer({
+    rendererType: 'webgpu',
+    coordinateTransform: 'wgs84-to-gcj02',
+    roads,
+    grid,
+    colorStops: legend,
+    colorRange: {
+        minValue: 0,
+        maxValue: 75
+    },
+    colorMode: 'step',
+    sampleMode: 'interpolate',
+    opacity: 1,
+    lineWidth: 8,
+    pane: 'road-pane'
+})
+
+roadLayer.addTo(map)
+```
+
 ---
 
 # geojson图层
+- UMD 使用 `M4WFast`
 
 2. 使用示例
 ```vue
@@ -206,6 +272,54 @@ read.setParams({
 ```
 
 ### 类型参照
+
+> RasterLeafletLayerCreateOptions
+
+| 参数 | 说明 | 类型 | 默认值 |
+|----|----|----|----|
+| `rendererType` | 渲染方式 | `'cpu' \| 'webgl' \| 'webgl2' \| 'webgpu'` | 必填 |
+| `grid` | 栅格数据, 可通过 `loadRasterGrid()` 获取 | `RasterGrid` | 必填 |
+| `colorStops` | 色标配置 | `{ min: number, max: number, color: string }[]` | 必填 |
+| `colorRange` | 当前显示的数据范围, 常用于滑块过滤 | `{ minValue: number, maxValue: number }` | 色标最小最大值 |
+| `opacity` | 图层透明度 | `number` | 渲染器默认值 |
+| `colorMode` | 颜色映射模式 | `'step' \| 'smooth'` | `'step'` |
+| `sampleMode` | 栅格采样模式 | `'interpolate' \| 'cell'` | `'interpolate'` |
+| `pane` | Leaflet pane 名称 | `string` | Leaflet 默认 overlayPane |
+| `tooltip` | 内置 tooltip 配置 | `RasterTooltipOptions` | 不启用 |
+| `onHover` | 鼠标移动查询回调 | `(result) => void` | 无 |
+| `onClick` | 鼠标点击查询回调 | `(result) => void` | 无 |
+
+> RasterLeafletLayer
+
+| 方法 | 说明 |
+|----|----|
+| `setParams(params)` | 使用参数方式更新栅格数据 |
+| `setSource(source)` | 使用 `tif` / `micaps4` / `params` 数据源更新栅格数据 |
+| `setGrid(grid)` | 直接更新栅格数据并重新上传纹理 |
+| `setColorStops(colorStops)` | 动态更新色标 |
+| `setColorRange(range)` | 动态更新显示值范围 |
+| `setColorMode(colorMode)` | 动态切换色标模式, 支持 `step` / `smooth` |
+| `setSampleMode(sampleMode)` | 动态切换采样模式, 支持 `interpolate` / `cell` |
+| `setOpacity(opacity)` | 动态设置图层透明度 |
+| `redraw()` | 手动重绘当前视口 |
+| `getCanvas()` | 获取当前图层 canvas, 可用于导出图片 |
+| `queryValueAt(point)` | 按统一 `x/y` 坐标查询栅格值 |
+| `queryValueAtLatLng(latLng)` | 按 Leaflet 经纬度查询栅格值 |
+
+---
+
+> RoadLeafletLayer
+
+| 方法 | 说明 |
+|----|----|
+| `redraw()` | 手动重绘道路图层 |
+| `setOpacity(opacity)` | 动态设置道路透明度 |
+| `setLineWidth(lineWidth)` | 动态设置道路线宽 |
+| `setColorMode(colorMode)` | 动态切换色标模式, 支持 `step` / `smooth` |
+| `setSampleMode(sampleMode)` | 动态切换采样模式, 支持 `interpolate` / `cell` |
+
+---
+
 > ReadConfig
 
 | 参数 | 说明 | 类型        | 默认值   |
