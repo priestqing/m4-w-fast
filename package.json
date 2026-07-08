@@ -19,6 +19,12 @@
             "import": "./dist/raster-overlay/index.mjs",
             "require": "./dist/raster-overlay/index.cjs",
             "default": "./dist/raster-overlay/index.mjs"
+        },
+        "./road-overlay": {
+            "types": "./dist/road-overlay/index.d.ts",
+            "import": "./dist/road-overlay/index.mjs",
+            "require": "./dist/road-overlay/index.cjs",
+            "default": "./dist/road-overlay/index.mjs"
         }
     },
     "scripts": {
