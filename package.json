@@ -45,8 +45,11 @@
         "README.md"
     ],
     "keywords": [
-        "m4",
-        "turf"
+        "micaps4",
+        "tif",
+        "webgpu",
+        "webgl2",
+        "raster"
     ],
     "publishConfig": {
         "registry": "https://registry.npmjs.org/"

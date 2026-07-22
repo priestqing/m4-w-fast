@@ -1,5 +1,6 @@
 import * as L from 'leaflet';
 import type { RasterColorRange, RasterColorStopInput, RasterGrid, RasterLeafletLayerCreateOptions, RasterParams, RasterSource, RasterColorMode, RasterSampleMode, RasterQueryPoint, RasterQueryResult } from './types';
+import type { ClipMode } from '../shared/coverage';
 export interface RasterLeafletLayer extends L.Layer {
     /**
      * 使用直接参数更新栅格数据
@@ -45,6 +46,9 @@ export interface RasterLeafletLayer extends L.Layer {
      * 更新外部字符串色标配置
      */
     setColorStops: (colorStops: RasterColorStopInput[]) => void;
+    /** 控制裁剪区域外是否仍执行查询和提示。 */
+    setQueryOutsideClip: (enabled: boolean) => void;
+    setClipMode: (mode: ClipMode) => void;
     /**
      * Query the raster value at a normalized x/y coordinate.
      * 按统一的 x/y 坐标查询栅格值

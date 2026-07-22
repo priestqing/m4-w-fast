@@ -1,5 +1,6 @@
 import type { Feature, FeatureCollection, GeoJsonProperties, LineString, MultiLineString } from 'geojson';
 import type { RasterColorMode, RasterColorRange, RasterColorStopInput, RasterGrid, RasterRendererType, RasterSampleMode, RasterSource } from '../raster-overlay';
+import type { CoverageOptions } from '../shared/coverage';
 /**
  * Road GeoJSON input type.
  * 道路 GeoJSON 输入类型
@@ -9,7 +10,7 @@ export type RoadGeoJsonInput = FeatureCollection<LineString | MultiLineString> |
  * Road coordinate point.
  * 道路坐标点
  * x/y: display 坐标，用于贴地图绘制。高德时可以是 GCJ-02
- * sampleX/sampleY: sample 坐标，用于采样 grid。micaps4 时保持 WGS84
+ * sampleX/sampleY: sample 坐标，用于采样 grid。micaps4 时保持 可能使用源坐标或显示坐标
  */
 export interface RoadCoordinate {
     x: number;
@@ -89,7 +90,7 @@ export interface RoadMeshSegment {
  * 道路 mesh 构建结果
  */
 export interface RoadMesh {
-    vertices: Float32Array;
+    vertices: Float32Array<ArrayBuffer>;
     segments: RoadMeshSegment[];
     vertexCount: number;
     triangleCount: number;
@@ -106,12 +107,18 @@ export type RoadRendererType = Extract<RasterRendererType, 'webgl2' | 'webgpu'>;
  */
 export type RoadCoordinateTransform = 'none' | 'wgs84-to-gcj02';
 /**
+ * Road grid sampling coordinate mode.
+ * 道路栅格采样坐标模式。
+ */
+export type RoadSampleCoordinateMode = 'source' | 'display';
+/**
  * Road layer create options.
  * 道路图层创建参数
  */
 export interface RoadLayerCreateOptions {
     rendererType: RoadRendererType;
     coordinateTransform?: RoadCoordinateTransform;
+    sampleCoordinateMode?: RoadSampleCoordinateMode;
     roads: RoadGeoJsonInput;
     grid?: RasterGrid;
     source?: RasterSource;
@@ -125,6 +132,7 @@ export interface RoadLayerCreateOptions {
     tooltip?: RoadTooltipOptions;
     onHover?: RoadQueryCallback;
     onClick?: RoadQueryCallback;
+    clip?: CoverageOptions;
 }
 /**
  * Road hover/click result.

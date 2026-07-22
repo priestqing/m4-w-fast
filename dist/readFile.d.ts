@@ -1,7 +1,7 @@
 import type { FeatureCollection, Polygon, MultiPolygon } from 'geojson';
 import type { IReadFileM4, ReadConfig, ParamsConfig, JSONData, CanvasOptions, Point } from './types';
 import type * as L from 'leaflet';
-export declare class readFileM4 implements IReadFileM4 {
+export declare class ReadFileM4 implements IReadFileM4 {
     filePath: string;
     nx: number;
     ny: number;
@@ -93,4 +93,4 @@ export declare class readFileM4 implements IReadFileM4 {
     private getAllGeo;
     private createCanvas;
 }
-export default readFileM4;
+export default ReadFileM4;

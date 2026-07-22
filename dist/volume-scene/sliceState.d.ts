@@ -1,0 +1,34 @@
+import type { IVolumeLockedSlice, IVolumeSliceAxes, IVolumeSlicePreview, IVolumeSliceStateOptions, IVolumeSliceStateSnapshot, VolumeSliceAxis, VolumeSliceAxisMode, VolumeSliceStateListener } from './sliceTypes';
+import type { VolumeDepthMode } from './profileTypes';
+import type { IVolumeAxis } from './sourceTypes';
+export declare const volumeAxisValueToNormalized: (axis: IVolumeAxis, value: number) => number;
+export declare const normalizedToVolumeAxisValue: (axis: IVolumeAxis, normalized: number) => number;
+export declare class SliceState {
+    private axes;
+    private readonly listeners;
+    private readonly onLimitReached;
+    private readonly maxLockedSlices;
+    private readonly depthMode;
+    private nextId;
+    private currentPreview;
+    private slices;
+    private mode;
+    readonly volumeDimFactor: number;
+    constructor(axes: IVolumeSliceAxes, options?: IVolumeSliceStateOptions);
+    get preview(): IVolumeSlicePreview | null;
+    get lockedSlices(): readonly IVolumeLockedSlice[];
+    get toolMode(): VolumeSliceAxisMode;
+    get snapshot(): IVolumeSliceStateSnapshot;
+    subscribe(listener: VolumeSliceStateListener): () => void;
+    get axisDefinitions(): IVolumeSliceAxes;
+    setAxes(axes: IVolumeSliceAxes): void;
+    setToolMode(mode: VolumeSliceAxisMode): void;
+    updatePreview(axis: VolumeSliceAxis, position: number): void;
+    clearPreview(): void;
+    lockPreview(depthMode?: VolumeDepthMode): IVolumeLockedSlice | null;
+    lockSlice(axis: VolumeSliceAxis, position: number, depthMode?: VolumeDepthMode): IVolumeLockedSlice | null;
+    updateLockedSlice(id: string, position: number): void;
+    removeSlice(id: string): void;
+    clearLockedSlices(): void;
+    private notify;
+}

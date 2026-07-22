@@ -1,0 +1,42 @@
+import type { WebgpuFrameContext } from '../../rendering';
+import { BaseWebgpuRenderer } from '../../rendering';
+import type { RendererReleaseReason } from '../../rendering';
+import type { ClipMode } from '../../shared/coverage';
+import type { PolygonMeshInput } from '../../shared/polygon';
+import type { ColorMode, ColorRange, ColorStop, GridData, SampleMode } from '../../shared/visualization';
+import { RasterRenderState } from './rasterRenderState';
+import type { RasterRenderer } from './renderer';
+/** 通过公共 WebGPU 生命周期渲染栅格及其四种裁剪模式。 */
+export declare class WebgpuRasterRenderer extends BaseWebgpuRenderer implements RasterRenderer<'webgpu'> {
+    private readonly rasterState;
+    private readonly paramsData;
+    private paramsBuffer;
+    private visualizationResources;
+    private coverageResources;
+    private pipelines;
+    private bindGroups;
+    private appliedGridRevision;
+    private appliedColorStopsRevision;
+    private appliedClipRevision;
+    constructor(rasterState?: RasterRenderState);
+    setGrid(grid: GridData): void;
+    setColorStops(colorStops: readonly ColorStop[]): void;
+    setColorRange(colorRange: ColorRange | null): void;
+    setOpacity(opacity: number): void;
+    setColorMode(colorMode: ColorMode): void;
+    setSampleMode(sampleMode: SampleMode): void;
+    setClip(data: PolygonMeshInput | null, mode?: ClipMode): void;
+    setClipMode(mode: ClipMode): void;
+    protected createFeatureResources(): void;
+    protected releaseFeatureResources(_reason: RendererReleaseReason): void;
+    protected handleResize(width: number, height: number): void;
+    protected prepareFrame(frame: WebgpuFrameContext): void;
+    protected encodePrePasses(frame: WebgpuFrameContext): void;
+    protected createMainPassDescriptor(frame: WebgpuFrameContext): GPURenderPassDescriptor;
+    protected encodeMainPass(pass: GPURenderPassEncoder, _frame: WebgpuFrameContext): void;
+    private createPipelines;
+    private createPipeline;
+    private syncResources;
+    private ensureBindGroup;
+    private getVisualizationResources;
+}

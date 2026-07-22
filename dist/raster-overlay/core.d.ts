@@ -1,4 +1,4 @@
-import type { RasterGrid, RasterLoadOptions, RasterParams, RasterSource } from './types';
+import type { RasterGrid, RasterLoadOptions, RasterParams, RasterSource } from './rasterTypes';
 /**
  * 根据直接参数创建统一栅格数据
  * @param params

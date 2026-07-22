@@ -1,7 +1,9 @@
-import type { RoadGeometry, RoadMesh } from './types';
+import type { RoadGeometry, RoadMesh, RoadMeshVertexLayout } from './types';
+export declare const ROAD_VERTEX_FLOAT_COUNT = 9;
+export declare const ROAD_VERTICES_PER_SEGMENT = 6;
+export declare const ROAD_MESH_VERTEX_LAYOUT: RoadMeshVertexLayout;
 /**
- * Build road mesh from normalized road geometries.
- * 根据规范化道路几何数据构建道路 mesh
- * @param roads
+ * Build a triangle mesh from normalized Road geometries.
+ * 根据规范化道路几何构建三角形 mesh。
  */
-export declare const buildRoadMesh: (roads: RoadGeometry[]) => RoadMesh;
+export declare const buildRoadMesh: (roads: readonly RoadGeometry[]) => RoadMesh;

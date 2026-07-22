@@ -1,6 +1,7 @@
 import * as L from 'leaflet';
 import { RasterColorMode, RasterSampleMode } from '../raster-overlay';
 import type { RoadLayerCreateOptions } from './types';
+import type { ClipMode } from '../shared/coverage';
 /**
  * Road Leaflet layer.
  * 道路 Leaflet 图层
@@ -15,6 +16,7 @@ export interface RoadLeafletLayer extends L.Layer {
     setLineWidth: (lineWidth: number) => void;
     setColorMode: (colorMode: RasterColorMode) => void;
     setSampleMode: (sampleMode: RasterSampleMode) => void;
+    setClipMode: (mode: ClipMode) => void;
 }
 /**
  * Create road Leaflet layer.

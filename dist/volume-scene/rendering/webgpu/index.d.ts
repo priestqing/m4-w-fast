@@ -1,0 +1,2 @@
+export { WebgpuVolumeSceneRenderer } from './webgpuVolumeSceneRenderer';
+export type { IWebgpuDirectedAxis, IWebgpuFrameCapture, IWebgpuOpacityStop, IWebgpuSceneMesh, IWebgpuTransferStop, IWebgpuVolumeBrickUpload, IWebgpuVolumeCamera, IWebgpuVolumeMetadata, IWebgpuVolumeRendererOptions, IWebgpuVolumeSceneUpdate, IWebgpuVolumeSlice, IWebgpuVolumeStatistics, WebgpuVolumeColorMode } from './webgpuVolumeTypes';

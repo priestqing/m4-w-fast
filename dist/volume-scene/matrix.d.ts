@@ -1,0 +1,11 @@
+import type { VolumeVector3 } from './cameraTypes';
+export declare const createIdentityMatrix: () => Float32Array<ArrayBuffer>;
+export declare const multiplyMatrices: (left: ArrayLike<number>, right: ArrayLike<number>) => Float32Array<ArrayBuffer>;
+export declare const invertMatrix: (matrix: ArrayLike<number>) => Float32Array<ArrayBuffer>;
+export declare const createLookAtMatrix: (position: VolumeVector3, target: VolumeVector3, up: VolumeVector3) => Float32Array<ArrayBuffer>;
+export declare const createPerspectiveMatrix: (fovYRadians: number, aspect: number, near: number, far: number) => Float32Array<ArrayBuffer>;
+export declare const createOrthographicMatrix: (height: number, aspect: number, near: number, far: number) => Float32Array<ArrayBuffer>;
+export declare const createScaleMatrix: (x: number, y: number, z: number) => Float32Array<ArrayBuffer>;
+export declare const composeVolumeModelMatrix: (baseMatrix: ArrayLike<number> | undefined, verticalScale: number) => Float32Array<ArrayBuffer>;
+export declare const transformPoint: (matrix: ArrayLike<number>, point: VolumeVector3, w?: number) => readonly [number, number, number, number];
+export declare const projectPointToViewport: (matrix: ArrayLike<number>, point: VolumeVector3, width: number, height: number) => readonly [number, number, number] | null;

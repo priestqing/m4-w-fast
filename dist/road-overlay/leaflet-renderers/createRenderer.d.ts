@@ -1,8 +1,4 @@
 import type { RoadRendererType } from '../types';
-import type { RoadLeafletRenderer } from './renderer';
-/**
- * Create road Leaflet renderer.
- * 创建道路 Leaflet 渲染器
- * @param rendererType
- */
-export declare const createRoadLeafletRenderer: (rendererType: RoadRendererType) => RoadLeafletRenderer;
+import type { RoadRenderer } from '../rendering';
+/** 按后端创建道路渲染器。 */
+export declare const createRoadLeafletRenderer: (rendererType: RoadRendererType) => RoadRenderer;

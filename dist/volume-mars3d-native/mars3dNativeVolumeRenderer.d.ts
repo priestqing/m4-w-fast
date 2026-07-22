@@ -1,0 +1,34 @@
+import type { IVolumeSource } from '../volume-scene/sourceTypes';
+import type { ICesiumNativeRuntime, IMars3dNativeMapLike, IMars3dNativeVolumeLayerOptions, IMars3dNativeVolumeLayerUpdate, INativeVolumeStatistics } from './nativeTypes';
+export declare class Mars3dNativeVolumeRenderer {
+    readonly readyPromise: Promise<void>;
+    private readonly map;
+    private readonly cesium;
+    private readonly onError;
+    private primitive;
+    private source;
+    private timeIndex;
+    private quality;
+    private opacity;
+    private densityScale;
+    private verticalScale;
+    private colorStops;
+    private opacityStops;
+    private colorMode;
+    private shown;
+    private destroyed;
+    private loadController;
+    constructor(map: IMars3dNativeMapLike, cesium: ICesiumNativeRuntime, options: IMars3dNativeVolumeLayerOptions);
+    get statistics(): INativeVolumeStatistics | null;
+    setShow(show: boolean): void;
+    update(options: IMars3dNativeVolumeLayerUpdate): void;
+    setSource(source: IVolumeSource): Promise<void>;
+    setTimeIndex(timeIndex: number): Promise<void>;
+    destroy(): void;
+    private replacePrimitive;
+    private createCustomShader;
+    private replaceCustomShader;
+    private updateShaderUniforms;
+    private updateBounds;
+    private assertAlive;
+}

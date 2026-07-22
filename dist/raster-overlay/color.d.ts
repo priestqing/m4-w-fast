@@ -1,4 +1,4 @@
-import type { RasterColorStopInput, RasterColorStop } from './types';
+import type { RasterColorStopInput, RasterColorStop } from './rasterTypes';
 /**
  * 归一化到 0-1的rgba
  * @param colorStops
