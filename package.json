@@ -20,11 +20,47 @@
             "require": "./dist/raster-overlay/index.cjs",
             "default": "./dist/raster-overlay/index.mjs"
         },
+        "./raster-rendering": {
+            "types": "./dist/raster-rendering/index.d.ts",
+            "import": "./dist/raster-rendering/index.mjs",
+            "require": "./dist/raster-rendering/index.cjs",
+            "default": "./dist/raster-rendering/index.mjs"
+        },
+        "./raster-leaflet": {
+            "types": "./dist/raster-leaflet/index.d.ts",
+            "import": "./dist/raster-leaflet/index.mjs",
+            "require": "./dist/raster-leaflet/index.cjs",
+            "default": "./dist/raster-leaflet/index.mjs"
+        },
+        "./raster-mars3d": {
+            "types": "./dist/raster-mars3d/index.d.ts",
+            "import": "./dist/raster-mars3d/index.mjs",
+            "require": "./dist/raster-mars3d/index.cjs",
+            "default": "./dist/raster-mars3d/index.mjs"
+        },
         "./road-overlay": {
             "types": "./dist/road-overlay/index.d.ts",
             "import": "./dist/road-overlay/index.mjs",
             "require": "./dist/road-overlay/index.cjs",
             "default": "./dist/road-overlay/index.mjs"
+        },
+        "./volume-scene": {
+            "types": "./dist/volume-scene/index.d.ts",
+            "import": "./dist/volume-scene/index.mjs",
+            "require": "./dist/volume-scene/index.cjs",
+            "default": "./dist/volume-scene/index.mjs"
+        },
+        "./volume-mars3d": {
+            "types": "./dist/volume-mars3d/index.d.ts",
+            "import": "./dist/volume-mars3d/index.mjs",
+            "require": "./dist/volume-mars3d/index.cjs",
+            "default": "./dist/volume-mars3d/index.mjs"
+        },
+        "./volume-mars3d-native": {
+            "types": "./dist/volume-mars3d-native/index.d.ts",
+            "import": "./dist/volume-mars3d-native/index.mjs",
+            "require": "./dist/volume-mars3d-native/index.cjs",
+            "default": "./dist/volume-mars3d-native/index.mjs"
         }
     },
     "scripts": {
@@ -68,28 +104,26 @@
         "leaflet": "^1.9.4"
     },
     "dependencies": {
-        "@turf/area": "^7.2.0",
+        "@turf/boolean-within": "6.5.0",
         "@turf/boolean-point-in-polygon": "^7.3.1",
-        "@turf/isobands": "^7.2.0",
-        "@turf/isolines": "^7.2.0",
-        "@turf/turf": "^6.5.0",
+        "@turf/helpers": "6.5.0",
+        "@turf/intersect": "6.5.0",
         "@types/leaflet": "^1.9.21",
         "@webgpu/types": "^0.1.71",
         "d3-contour": "^4",
         "decimal.js": "^10.6.0",
+        "earcut": "^3.2.3",
         "geotiff": "3.0.5"
     },
     "devDependencies": {
-        "@rollup/plugin-commonjs": "^29.0.0",
-        "@rollup/plugin-node-resolve": "^16.0.3",
-        "@rollup/plugin-typescript": "^12.3.0",
         "@tsconfig/node20": "^20.1.2",
         "@types/big.js": "^6.2.2",
         "@types/d3-contour": "^3.0.6",
-        "@types/geojson": "latest",
+        "@types/earcut": "^3.0.0",
+        "@types/geojson": "7946.0.16",
         "esbuild": "^0.25.11",
         "javascript-obfuscator": "^4.1.1",
-        "rollup": "^4.52.5",
-        "typescript": "latest"
+        "rolldown": "1.1.2",
+        "typescript": "5.9.3"
     }
 }
