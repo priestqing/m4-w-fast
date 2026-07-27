@@ -1,0 +1,5 @@
+export type VolumeDataErrorCode = 'UNSUPPORTED_FORMAT' | 'FETCH_FAILED' | 'INPUT_TOO_LARGE' | 'INVALID_ZIP' | 'ZIP64_UNSUPPORTED' | 'TOO_MANY_ENTRIES' | 'ENTRY_NOT_FOUND' | 'AMBIGUOUS_ENTRY' | 'ENTRY_TOO_LARGE' | 'SUSPICIOUS_COMPRESSION_RATIO' | 'ENCRYPTED_ENTRY' | 'UNSUPPORTED_COMPRESSION' | 'FILE_TOO_SHORT' | 'INVALID_HEADER_LENGTH' | 'INVALID_HEADER_JSON' | 'INVALID_METADATA' | 'UNSUPPORTED_DATA_TYPE' | 'INVALID_AXIS' | 'INVALID_DATA_SIZE' | 'INVALID_PAYLOAD_LENGTH';
+export declare class VolumeDataError extends Error {
+    readonly code: VolumeDataErrorCode;
+    constructor(code: VolumeDataErrorCode, message: string, options?: ErrorOptions);
+}

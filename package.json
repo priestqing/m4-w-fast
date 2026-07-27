@@ -50,6 +50,18 @@
             "require": "./dist/volume-scene/index.cjs",
             "default": "./dist/volume-scene/index.mjs"
         },
+        "./volume-data": {
+            "types": "./dist/volume-data/index.d.ts",
+            "import": "./dist/volume-data/index.mjs",
+            "require": "./dist/volume-data/index.cjs",
+            "default": "./dist/volume-data/index.mjs"
+        },
+        "./volume-section": {
+            "types": "./dist/volume-section/index.d.ts",
+            "import": "./dist/volume-section/index.mjs",
+            "require": "./dist/volume-section/index.cjs",
+            "default": "./dist/volume-section/index.mjs"
+        },
         "./volume-mars3d": {
             "types": "./dist/volume-mars3d/index.d.ts",
             "import": "./dist/volume-mars3d/index.mjs",
@@ -73,7 +85,7 @@
     },
     "browser": "dist/m4-w-fast.umd.js",
     "author": "wangrl",
-    "license": "ISC",
+    "license": "Apache-2.0",
     "type": "module",
     "files": [
         "dist",
