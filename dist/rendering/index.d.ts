@@ -1,5 +1,9 @@
 export type { MapRenderer, RendererFactory, RendererFactoryMap } from './renderer';
 export type { GpuRendererBackend, RendererBackend, RendererLifecycleState, RendererReleaseReason } from './types';
+export type { CpuFrameContext, CpuRendererRequirements, CpuRendererResources } from './cpu';
+export { BaseCpuRenderer } from './cpu';
+export type { WebglFrameContext, WebglRendererRequirements, WebglRendererResources } from './webgl';
+export { BaseWebglRenderer, WebglCoverageResources, WebglVisualizationResources } from './webgl';
 export { BaseWebgpuRenderer, WebgpuCoverageResources } from './webgpu';
 export type { WebgpuFrameContext, WebgpuRendererRequirements, WebgpuRendererResources } from './webgpu';
 export type { Webgl2FrameContext, Webgl2RendererRequirements, Webgl2RendererResources } from './webgl2/types';

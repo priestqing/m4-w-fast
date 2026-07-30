@@ -7,7 +7,7 @@ export type RendererBackend = 'cpu' | 'webgl' | 'webgl2' | 'webgpu';
  * GPU renderer backends.
  * GPU 渲染后端。
  */
-export type GpuRendererBackend = Extract<RendererBackend, 'webgl2' | 'webgpu'>;
+export type GpuRendererBackend = Extract<RendererBackend, 'webgl' | 'webgl2' | 'webgpu'>;
 /**
  * Renderer lifecycle states.
  * 渲染器生命周期状态。

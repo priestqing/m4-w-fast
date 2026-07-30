@@ -55,10 +55,20 @@ export interface RasterLeafletLayer extends L.Layer {
      */
     queryValueAt: (point: RasterQueryPoint) => RasterQueryResult;
     /**
+     * Query raster values at normalized x/y coordinates.
+     * 按统一的 x/y 坐标批量查询栅格值
+     */
+    queryValuesAt: (points: readonly RasterQueryPoint[]) => RasterQueryResult[];
+    /**
      * Query the raster value at a Leaflet latLng.
      * 按 Leaflet 的经纬度查询栅格值
      */
     queryValueAtLatLng: (latLng: L.LatLngExpression) => RasterQueryResult;
+    /**
+     * Query raster values at Leaflet latLngs.
+     * 按 Leaflet 经纬度批量查询栅格值
+     */
+    queryValuesAtLatLng: (latLngs: readonly L.LatLngExpression[]) => RasterQueryResult[];
 }
 /**
  * leaflet 栅格图层工厂函数

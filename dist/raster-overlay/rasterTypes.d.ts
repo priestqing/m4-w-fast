@@ -1,6 +1,6 @@
 import type { ClipMode, CoverageOptions } from '../shared/coverage';
 import type { ColorMode, ColorRange, ColorStop, ColorStopInput, GridData, SampleMode } from '../shared/visualization';
-export type RasterRendererType = 'webgl2' | 'webgpu';
+export type RasterRendererType = 'cpu' | 'webgl' | 'webgl2' | 'webgpu';
 export type RasterColorMode = ColorMode;
 export type RasterSampleMode = SampleMode;
 export type RasterColorStopInput = ColorStopInput;
@@ -49,7 +49,7 @@ export interface RasterLoadOptions {
     noData?: number;
     valueScale?: number;
 }
-export type RasterQueryReason = 'ok' | 'no-data' | 'out-of-bounds' | 'out-of-range' | 'outside-clip';
+export type RasterQueryReason = 'ok' | 'no-data' | 'out-of-bounds' | 'out-of-range' | 'outside-clip' | 'invalid-point';
 export interface RasterQueryPoint {
     x: number;
     y: number;

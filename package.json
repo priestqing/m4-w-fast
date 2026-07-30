@@ -32,6 +32,24 @@
             "require": "./dist/raster-leaflet/index.cjs",
             "default": "./dist/raster-leaflet/index.mjs"
         },
+        "./raster-point-overlay": {
+            "types": "./dist/raster-point-overlay/index.d.ts",
+            "import": "./dist/raster-point-overlay/index.mjs",
+            "require": "./dist/raster-point-overlay/index.cjs",
+            "default": "./dist/raster-point-overlay/index.mjs"
+        },
+        "./wind-data": {
+            "types": "./dist/wind-data/index.d.ts",
+            "import": "./dist/wind-data/index.mjs",
+            "require": "./dist/wind-data/index.cjs",
+            "default": "./dist/wind-data/index.mjs"
+        },
+        "./wind-point-overlay": {
+            "types": "./dist/wind-point-overlay/index.d.ts",
+            "import": "./dist/wind-point-overlay/index.mjs",
+            "require": "./dist/wind-point-overlay/index.cjs",
+            "default": "./dist/wind-point-overlay/index.mjs"
+        },
         "./raster-mars3d": {
             "types": "./dist/raster-mars3d/index.d.ts",
             "import": "./dist/raster-mars3d/index.mjs",
@@ -97,7 +115,10 @@
         "tif",
         "webgpu",
         "webgl2",
-        "raster"
+        "raster",
+        "volume",
+        "wind",
+        "leaflet"
     ],
     "publishConfig": {
         "registry": "https://registry.npmjs.org/"
