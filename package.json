@@ -7,10 +7,10 @@
     "types": "dist/index.d.ts",
     "exports": {
         ".": {
+            "types": "./dist/index.d.ts",
             "import": "./dist/index.mjs",
             "require": "./dist/index.cjs",
-            "default": "./dist/index.mjs",
-            "types": "./dist/index.d.ts"
+            "default": "./dist/index.mjs"
         },
         "./isoBands.worker.js": "./dist/isoBands.worker.js",
         "./intersect.worker.js": "./dist/intersect.worker.js",
@@ -38,6 +38,12 @@
             "require": "./dist/raster-point-overlay/index.cjs",
             "default": "./dist/raster-point-overlay/index.mjs"
         },
+        "./point-overlay": {
+            "types": "./dist/point-overlay/index.d.ts",
+            "import": "./dist/point-overlay/index.mjs",
+            "require": "./dist/point-overlay/index.cjs",
+            "default": "./dist/point-overlay/index.mjs"
+        },
         "./wind-data": {
             "types": "./dist/wind-data/index.d.ts",
             "import": "./dist/wind-data/index.mjs",
@@ -49,6 +55,12 @@
             "import": "./dist/wind-point-overlay/index.mjs",
             "require": "./dist/wind-point-overlay/index.cjs",
             "default": "./dist/wind-point-overlay/index.mjs"
+        },
+        "./wind-flow-overlay": {
+            "types": "./dist/wind-flow-overlay/index.d.ts",
+            "import": "./dist/wind-flow-overlay/index.mjs",
+            "require": "./dist/wind-flow-overlay/index.cjs",
+            "default": "./dist/wind-flow-overlay/index.mjs"
         },
         "./raster-mars3d": {
             "types": "./dist/raster-mars3d/index.d.ts",
