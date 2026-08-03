@@ -1,0 +1,30 @@
+import type { RendererReleaseReason, WebgpuFrameContext } from '../../rendering';
+import { BaseWebgpuRenderer } from '../../rendering';
+import type { ColorMode, ColorRange, ColorStop } from '../../shared/visualization';
+import type { PpiMesh } from '../ppiMesh';
+import type { PpiRenderer } from './ppiRenderer';
+import { PpiRenderState } from './ppiRenderState';
+export declare class WebgpuPpiRenderer extends BaseWebgpuRenderer implements PpiRenderer<'webgpu'> {
+    private readonly ppiState;
+    private readonly paramsData;
+    private pipeline;
+    private vertexBuffer;
+    private paramsBuffer;
+    private bindGroup;
+    private visualization;
+    private meshRevision;
+    private gridRevision;
+    private colorRevision;
+    constructor(ppiState?: PpiRenderState);
+    setMesh(mesh: PpiMesh): void;
+    setColorStops(stops: readonly ColorStop[]): void;
+    setColorRange(range: ColorRange | null): void;
+    setOpacity(opacity: number): void;
+    setColorMode(mode: ColorMode): void;
+    protected createFeatureResources(): void;
+    protected releaseFeatureResources(_reason: RendererReleaseReason): void;
+    protected prepareFrame(frame: WebgpuFrameContext): void;
+    protected encodeMainPass(pass: GPURenderPassEncoder): void;
+    private syncResources;
+    private ensureBindGroup;
+}

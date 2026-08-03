@@ -49,8 +49,22 @@ export interface IPointFrameOptions {
     minSpacing?: number;
     maxPoints?: number;
     candidateFactor?: number;
+    fullDisplayZoom?: number;
+    alwaysVisible?: readonly PointAlwaysVisible[];
     colorRange?: ColorRange | null;
 }
+export interface IPointAlwaysVisibleStyle {
+    radius?: number;
+    fillColor?: string;
+    strokeColor?: string;
+    strokeWidth?: number;
+    opacity?: number;
+}
+/** Priority station data, matched by ID when present and otherwise by exact x/y. */
+export interface IPointAlwaysVisibleStation extends IPointDataItem {
+    style?: IPointAlwaysVisibleStyle;
+}
+export type PointAlwaysVisible = IPointAlwaysVisibleStation;
 export interface IPointCircleIcon {
     type: 'circle';
     radius?: number;
@@ -85,6 +99,10 @@ export interface IPointLodOptions {
     minSpacing?: number;
     maxPoints?: number;
     candidateFactor?: number;
+    /** Show every visible station at and above this zoom. */
+    fullDisplayZoom?: number;
+    /** Priority station data objects that always bypass visual LOD. */
+    alwaysVisible?: readonly PointAlwaysVisible[];
 }
 export interface IPointInteractionOptions {
     hover?: boolean;
@@ -96,7 +114,8 @@ export interface IPointInteractionOptions {
         formatter?: (point: IPointFeature) => string;
     };
 }
-export type PointRendererType = 'webgl2' | 'canvas';
+/** Point rendering backend. `canvas` is kept as a compatibility alias of `cpu`. */
+export type PointRendererType = 'cpu' | 'webgl' | 'webgl2' | 'webgpu' | 'canvas';
 export type PointCallback = (point: IPointFeature) => void;
 export interface IPointLeafletLayerCreateOptions extends L.LayerOptions {
     data: PointDataSource;

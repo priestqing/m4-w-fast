@@ -21,7 +21,7 @@ export interface IPointRenderInput {
     opacity: number;
 }
 export interface IPointRenderer {
-    readonly type: PointRendererType;
+    readonly type: Exclude<PointRendererType, 'canvas'>;
     setIcon(icon: PointIconOptions): Promise<void>;
     render(input: IPointRenderInput): void;
     resize(width: number, height: number): void;

@@ -2,7 +2,7 @@ import type { IPointRenderer, IPointRenderInput } from './types';
 import type { PointIconOptions } from '../types';
 export declare class CanvasPointRenderer implements IPointRenderer {
     private readonly canvas;
-    readonly type: "canvas";
+    readonly type: "cpu";
     private icon;
     private iconGeneration;
     private readonly tintedIcons;
