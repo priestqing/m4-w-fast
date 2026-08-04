@@ -1,5 +1,10 @@
 import type { GridData } from '../shared/visualization';
 import type { PpiRadarProduct, PpiRasterizeOptions, RadarProduct } from './types';
+export interface IPpiSample {
+    value: number;
+    radialIndex: number;
+    binIndex: number;
+}
 /** 将雷达产品转换为现有四后端渲染器可直接使用的规则栅格。CR 不复制数据。 */
 export declare const radarProductToGrid: (product: RadarProduct, options?: PpiRasterizeOptions) => GridData;
 /**
@@ -9,3 +14,5 @@ export declare const radarProductToGrid: (product: RadarProduct, options?: PpiRa
 export declare const createPpiRasterGrid: (product: PpiRadarProduct, options?: PpiRasterizeOptions) => GridData;
 /** 按地面距离和方位角查询原始 PPI 径向数据。 */
 export declare const samplePpiValue: (product: PpiRadarProduct, groundDistance: number, azimuth: number) => number;
+/** 按地面距离和方位角查询 PPI 值及对应径向、距离库索引。 */
+export declare const queryPpiValue: (product: PpiRadarProduct, groundDistance: number, azimuth: number) => IPpiSample;

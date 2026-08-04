@@ -4,7 +4,13 @@ export declare const RADAR_MAGIC_NUMBER = 1297371986;
 export declare enum RadarProductType {
     PPI = 1,
     CR = 18,
+    /** 厂商扩展标识，默认注册表不推断其数据结构。 */
     CRX = 54
+}
+export declare enum RadarProjectionType {
+    MERCATOR = 1,
+    AZIMUTHAL_EQUIDISTANT = 2,
+    LAMBERT_AZIMUTHAL_EQUAL_AREA = 13
 }
 export interface RadarGenericHeader {
     magicNumber: number;
@@ -25,10 +31,6 @@ export interface RadarStation {
     beamWidthVert: number;
     rdaVersion: number;
     radarType: number;
-    antennaGain: number;
-    transmittingFeederLoss: number;
-    receivingFeederLoss: number;
-    otherLoss: number;
 }
 export interface RadarTask {
     taskName: string;
@@ -150,7 +152,34 @@ export interface RadarRadial {
     startAngle: number;
     angularWidth: number;
     centerAngle: number;
+    encodedValues: RadarEncodedValues;
     values: Float32Array;
+}
+export type RadarEncodedValues = Uint8Array | Uint16Array;
+export interface IRadarStormAttribute {
+    stormId: number;
+    azimuth: number;
+    range: number;
+    tvsType: number;
+    mesocycloneType: number;
+    severeHailProbability: number;
+    hailProbability: number;
+    hailSize: number;
+    verticallyIntegratedLiquid: number;
+    maximumReflectivity: number;
+    maximumReflectivityHeight: number;
+    echoTop: number;
+    direction: number;
+    speed: number;
+}
+export interface IRadarProjectedGrid {
+    projectionType: number;
+    centerLatitude: number;
+    centerLongitude: number;
+    minX: number;
+    maxX: number;
+    minY: number;
+    maxY: number;
 }
 interface RadarProductBase {
     metadata: RadarMetadata;
@@ -159,9 +188,13 @@ interface RadarProductBase {
 }
 export interface CrRadarProduct extends RadarProductBase {
     kind: 'cr';
-    productType: RadarProductType.CR | RadarProductType.CRX;
+    productType: RadarProductType.CR;
     header: RadarGridHeader;
+    encodedValues: RadarEncodedValues;
+    projectedGrid: IRadarProjectedGrid;
+    /** 供现有经纬度规则栅格渲染器使用的局部近似。 */
     grid: GridData;
+    storms: IRadarStormAttribute[];
 }
 export interface PpiRadarProduct extends RadarProductBase {
     kind: 'ppi';

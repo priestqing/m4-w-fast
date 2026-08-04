@@ -16,6 +16,7 @@ export declare class RadarBinaryReader {
     uint32(): number;
     float32(): number;
     int64(): bigint;
+    uint64(): bigint;
     text(byteLength: number): string;
     private ensure;
 }
