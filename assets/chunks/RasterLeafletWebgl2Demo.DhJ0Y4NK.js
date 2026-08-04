@@ -1,1 +1,0 @@
-import{At as e,at as t,pt as n}from"./framework.27KCZd5Q.js";import{t as r}from"./RasterLeafletBackendDemo.CvFJcO-U.js";var i=n({__name:`RasterLeafletWebgl2Demo`,setup(n){return(n,i)=>(e(),t(r,{"renderer-type":`webgl2`,title:`Leaflet WebGL2 栅格`}))}});export{i as default};
