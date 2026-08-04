@@ -8,6 +8,7 @@ export type PointIdArray = readonly PointId[] | Uint32Array;
 export type PointNameArray = readonly string[] | Uint32Array;
 export type PointProperties = Record<string, unknown>;
 export type PointLabelContent = 'none' | 'value' | 'name' | 'name-value';
+export type PointLabelPosition = 'top' | 'bottom';
 export interface IPointDataItem {
     id?: PointId;
     x: number;
@@ -15,6 +16,11 @@ export interface IPointDataItem {
     value: number;
     name?: string | number;
     properties?: PointProperties;
+}
+export interface IPointLabelPartOptions {
+    position?: PointLabelPosition;
+    color?: string;
+    font?: string;
 }
 export interface PointLabelOptions {
     content?: PointLabelContent;
@@ -26,6 +32,9 @@ export interface PointLabelOptions {
     font?: string;
     offset?: number;
     lineHeight?: number;
+    position?: PointLabelPosition;
+    name?: IPointLabelPartOptions;
+    value?: IPointLabelPartOptions;
 }
 export interface IPointColumnData {
     x: PointCoordinateArray;

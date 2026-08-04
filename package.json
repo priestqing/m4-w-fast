@@ -156,7 +156,7 @@
     "bugs": {
         "url": "https://github.com/priestqing/m4-w-fast/issues"
     },
-    "homepage": "https://github.com/priestqing/m4-w-fast",
+    "homepage": "https://priestqing.github.io/m4-w-fast/",
     "peerDependencies": {
         "@turf/turf": "^6.5.0",
         "d3-contour": "^4",
