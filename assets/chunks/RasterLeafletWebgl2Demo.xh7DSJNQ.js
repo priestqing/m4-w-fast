@@ -1,0 +1,1 @@
+import{At as e,at as t,pt as n}from"./framework.e5juw6ia.js";import{t as r}from"./RasterLeafletBackendDemo.-rd3j-Go.js";var i=n({__name:`RasterLeafletWebgl2Demo`,setup(n){return(n,i)=>(e(),t(r,{"renderer-type":`webgl2`,title:`Leaflet WebGL2 栅格`}))}});export{i as default};

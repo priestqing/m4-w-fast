@@ -1,0 +1,1 @@
+import{At as e,at as t,pt as n}from"./framework.e5juw6ia.js";import{t as r}from"./RoadLeafletGpuDemo.VZQrODc_.js";var i=n({__name:`RoadLeafletWebgl2Demo`,setup(n){return(n,i)=>(e(),t(r,{"renderer-type":`webgl2`}))}});export{i as default};

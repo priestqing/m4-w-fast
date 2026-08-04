@@ -4,7 +4,157 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fc571816-3e29-403f-8ed7-2aa08c51dd8c" name="更改" comment="1.3.2" />
+    <list default="true" id="fc571816-3e29-403f-8ed7-2aa08c51dd8c" name="更改" comment="1.3.2">
+      <change beforePath="$PROJECT_DIR$/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/404.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/app.DRHyCjVj.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/chunks/@localSearchIndexroot.CzfedgOw.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/chunks/Mars3dNativeSlicesDemo.CT4Fk1YD.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/chunks/RasterAmapWebgpuDemo.CZJ0kD8v.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/chunks/RasterClippingDemo.CHOltFV_.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/chunks/RasterColorSamplingDemo.Dtn88Q_P.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/chunks/RasterGeoJsonReadFileDemo.DbSnb0Is.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/chunks/RasterInteractionDemo.Dk_ObCZ8.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/chunks/RasterLeafletBackendDemo.CRhZCEwd.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/chunks/RasterLeafletPlaybackDemo.DXo-qqI0.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/chunks/RasterLeafletWebgl2Demo.B6R7sg-r.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/chunks/RasterLeafletWebgpuDemo.DraTBSTR.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/chunks/RasterMars3dImageryDemo.BUb0_SnV.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/chunks/RasterMars3dPlaneDemo.CNtLeaLm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/chunks/RoadClippingControlsDemo.jkPNMRE-.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/chunks/RoadLeafletGpuDemo.B3p_EfLJ.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/chunks/RoadLeafletWebgl2Demo.BnkvFAQg.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/chunks/RoadLeafletWebgpuDemo.qgnjMKHs.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/chunks/VPLocalSearchBox.CgUCQlUL.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/chunks/VerticalSectionLeafletDemo.DHTGSEoz.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/chunks/VerticalSectionMars3dWallDemo.CBrdkbsQ.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/chunks/VolumeSceneDemo.IwOhppTB.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/chunks/assets.BxhwW9bm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/chunks/framework.Cb3dc2_V.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/chunks/metadata.9bc7832c.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/chunks/rasterLeafletDemoData.CA-nn5aM.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/chunks/roadLeafletDemoData.BDhfZiMz.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/chunks/theme.CXiNtCvO.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/chunks/verticalSectionDemoData.RtSWoD1c.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/doc-draw_m4-w-fast_data-contract.md.DFQqlhRO.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/doc-draw_m4-w-fast_data-contract.md.DFQqlhRO.lean.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/doc-draw_m4-w-fast_index.md.BFKhKn59.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/doc-draw_m4-w-fast_index.md.BFKhKn59.lean.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/doc-draw_m4-w-fast_install.md.DDFpBmkI.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/doc-draw_m4-w-fast_install.md.DDFpBmkI.lean.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/doc-draw_m4-w-fast_raster_amap_webgpu.md.n5VkrmfW.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/doc-draw_m4-w-fast_raster_amap_webgpu.md.n5VkrmfW.lean.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/doc-draw_m4-w-fast_raster_color-and-sampling.md.UO7SGa7z.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/doc-draw_m4-w-fast_raster_color-and-sampling.md.UO7SGa7z.lean.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/doc-draw_m4-w-fast_raster_data-loading.md.CpafhVC4.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/doc-draw_m4-w-fast_raster_data-loading.md.CpafhVC4.lean.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/doc-draw_m4-w-fast_raster_geojson_read-file.md.Cf1YNHSr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/doc-draw_m4-w-fast_raster_geojson_read-file.md.Cf1YNHSr.lean.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/doc-draw_m4-w-fast_raster_index.md.DADuWX7D.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/doc-draw_m4-w-fast_raster_index.md.DADuWX7D.lean.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/doc-draw_m4-w-fast_raster_leaflet_clipping.md.MILUYZdF.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/doc-draw_m4-w-fast_raster_leaflet_clipping.md.MILUYZdF.lean.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/doc-draw_m4-w-fast_raster_leaflet_cpu.md.BWyxN6da.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/doc-draw_m4-w-fast_raster_leaflet_cpu.md.BWyxN6da.lean.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/doc-draw_m4-w-fast_raster_leaflet_interaction.md.B2IbdaOt.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/doc-draw_m4-w-fast_raster_leaflet_interaction.md.B2IbdaOt.lean.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/doc-draw_m4-w-fast_raster_leaflet_playback.md.k30xxJ1s.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/doc-draw_m4-w-fast_raster_leaflet_playback.md.k30xxJ1s.lean.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/doc-draw_m4-w-fast_raster_leaflet_webgl.md.DC5WZopO.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/doc-draw_m4-w-fast_raster_leaflet_webgl.md.DC5WZopO.lean.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/doc-draw_m4-w-fast_raster_leaflet_webgl2.md.BBFP6Opd.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/doc-draw_m4-w-fast_raster_leaflet_webgl2.md.BBFP6Opd.lean.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/doc-draw_m4-w-fast_raster_leaflet_webgpu.md.CdcU8DBg.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/doc-draw_m4-w-fast_raster_leaflet_webgpu.md.CdcU8DBg.lean.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/doc-draw_m4-w-fast_raster_mars3d_altitude-plane.md.BAmWXJH2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/doc-draw_m4-w-fast_raster_mars3d_altitude-plane.md.BAmWXJH2.lean.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/doc-draw_m4-w-fast_raster_mars3d_imagery.md.CULzAyw5.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/doc-draw_m4-w-fast_raster_mars3d_imagery.md.CULzAyw5.lean.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/doc-draw_m4-w-fast_road_advanced-query.md.D07wH62d.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/doc-draw_m4-w-fast_road_advanced-query.md.D07wH62d.lean.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/doc-draw_m4-w-fast_road_compute.md.Bo23FXwN.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/doc-draw_m4-w-fast_road_compute.md.Bo23FXwN.lean.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/doc-draw_m4-w-fast_road_data-and-sampling.md.D8KYUl31.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/doc-draw_m4-w-fast_road_data-and-sampling.md.D8KYUl31.lean.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/doc-draw_m4-w-fast_road_index.md.C0h0v2zk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/doc-draw_m4-w-fast_road_index.md.C0h0v2zk.lean.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/doc-draw_m4-w-fast_road_leaflet_clipping-and-controls.md.CFAa99_2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/doc-draw_m4-w-fast_road_leaflet_clipping-and-controls.md.CFAa99_2.lean.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/doc-draw_m4-w-fast_road_leaflet_interactions.md.dW1wFtLx.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/doc-draw_m4-w-fast_road_leaflet_interactions.md.dW1wFtLx.lean.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/doc-draw_m4-w-fast_road_leaflet_webgl.md.Dt_LUQX2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/doc-draw_m4-w-fast_road_leaflet_webgl.md.Dt_LUQX2.lean.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/doc-draw_m4-w-fast_road_leaflet_webgl2.md.jUEQu39T.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/doc-draw_m4-w-fast_road_leaflet_webgl2.md.jUEQu39T.lean.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/doc-draw_m4-w-fast_road_leaflet_webgpu.md.BxkT0ZGx.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/doc-draw_m4-w-fast_road_leaflet_webgpu.md.BxkT0ZGx.lean.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/doc-draw_m4-w-fast_vertical-section_cesium-depth.md.BniaCLqo.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/doc-draw_m4-w-fast_vertical-section_cesium-depth.md.BniaCLqo.lean.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/doc-draw_m4-w-fast_vertical-section_examples_leaflet-2d.md.DTBi7_sr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/doc-draw_m4-w-fast_vertical-section_examples_leaflet-2d.md.DTBi7_sr.lean.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/doc-draw_m4-w-fast_vertical-section_examples_mars3d-native-slices.md.BDi513G6.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/doc-draw_m4-w-fast_vertical-section_examples_mars3d-native-slices.md.BDi513G6.lean.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/doc-draw_m4-w-fast_vertical-section_examples_mars3d-wall.md.CtF4cfbB.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/doc-draw_m4-w-fast_vertical-section_examples_mars3d-wall.md.CtF4cfbB.lean.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/doc-draw_m4-w-fast_vertical-section_examples_volume-scene.md.ClJ3PvtY.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/doc-draw_m4-w-fast_vertical-section_examples_volume-scene.md.ClJ3PvtY.lean.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/doc-draw_m4-w-fast_vertical-section_index.md.C8cdc5nS.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/doc-draw_m4-w-fast_vertical-section_index.md.C8cdc5nS.lean.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/doc-draw_m4-w-fast_vertical-section_leaflet-2d.md.BHjFAkyx.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/doc-draw_m4-w-fast_vertical-section_leaflet-2d.md.BHjFAkyx.lean.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/doc-draw_m4-w-fast_vertical-section_mars3d-native-slices.md.BzscSfPZ.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/doc-draw_m4-w-fast_vertical-section_mars3d-native-slices.md.BzscSfPZ.lean.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/doc-draw_m4-w-fast_vertical-section_mars3d-wall.md.DdOknMhR.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/doc-draw_m4-w-fast_vertical-section_mars3d-wall.md.DdOknMhR.lean.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/doc-draw_m4-w-fast_vertical-section_picking.md.C6s33ePR.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/doc-draw_m4-w-fast_vertical-section_picking.md.C6s33ePR.lean.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/doc-draw_m4-w-fast_vertical-section_volume-scene.md.DaFSe5Le.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/doc-draw_m4-w-fast_vertical-section_volume-scene.md.DaFSe5Le.lean.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/doc-draw_m4-w-fast_vertical-section_webgl2.md.Bxh_7UhI.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/doc-draw_m4-w-fast_vertical-section_webgl2.md.Bxh_7UhI.lean.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/index.md.igH8drZt.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/index.md.igH8drZt.lean.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/style.C9yyyQAY.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc-draw/m4-w-fast/data-contract.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc-draw/m4-w-fast/data-contract.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc-draw/m4-w-fast/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc-draw/m4-w-fast/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc-draw/m4-w-fast/install.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc-draw/m4-w-fast/install.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc-draw/m4-w-fast/raster/amap/webgpu.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc-draw/m4-w-fast/raster/amap/webgpu.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc-draw/m4-w-fast/raster/color-and-sampling.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc-draw/m4-w-fast/raster/color-and-sampling.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc-draw/m4-w-fast/raster/data-loading.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc-draw/m4-w-fast/raster/data-loading.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc-draw/m4-w-fast/raster/geojson/read-file.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc-draw/m4-w-fast/raster/geojson/read-file.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc-draw/m4-w-fast/raster/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc-draw/m4-w-fast/raster/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc-draw/m4-w-fast/raster/leaflet/clipping.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc-draw/m4-w-fast/raster/leaflet/clipping.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc-draw/m4-w-fast/raster/leaflet/cpu.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc-draw/m4-w-fast/raster/leaflet/cpu.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc-draw/m4-w-fast/raster/leaflet/interaction.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc-draw/m4-w-fast/raster/leaflet/interaction.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc-draw/m4-w-fast/raster/leaflet/playback.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc-draw/m4-w-fast/raster/leaflet/playback.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc-draw/m4-w-fast/raster/leaflet/webgl.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc-draw/m4-w-fast/raster/leaflet/webgl.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc-draw/m4-w-fast/raster/leaflet/webgl2.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc-draw/m4-w-fast/raster/leaflet/webgl2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc-draw/m4-w-fast/raster/leaflet/webgpu.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc-draw/m4-w-fast/raster/leaflet/webgpu.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc-draw/m4-w-fast/raster/mars3d/altitude-plane.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc-draw/m4-w-fast/raster/mars3d/altitude-plane.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc-draw/m4-w-fast/raster/mars3d/imagery.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc-draw/m4-w-fast/raster/mars3d/imagery.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc-draw/m4-w-fast/road/advanced-query.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc-draw/m4-w-fast/road/advanced-query.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc-draw/m4-w-fast/road/compute.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc-draw/m4-w-fast/road/compute.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc-draw/m4-w-fast/road/data-and-sampling.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc-draw/m4-w-fast/road/data-and-sampling.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc-draw/m4-w-fast/road/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc-draw/m4-w-fast/road/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc-draw/m4-w-fast/road/leaflet/clipping-and-controls.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc-draw/m4-w-fast/road/leaflet/clipping-and-controls.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc-draw/m4-w-fast/road/leaflet/interactions.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc-draw/m4-w-fast/road/leaflet/interactions.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc-draw/m4-w-fast/road/leaflet/webgl.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc-draw/m4-w-fast/road/leaflet/webgl.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc-draw/m4-w-fast/road/leaflet/webgl2.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc-draw/m4-w-fast/road/leaflet/webgl2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc-draw/m4-w-fast/road/leaflet/webgpu.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc-draw/m4-w-fast/road/leaflet/webgpu.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc-draw/m4-w-fast/vertical-section/cesium-depth.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc-draw/m4-w-fast/vertical-section/cesium-depth.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc-draw/m4-w-fast/vertical-section/examples/leaflet-2d.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc-draw/m4-w-fast/vertical-section/examples/leaflet-2d.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc-draw/m4-w-fast/vertical-section/examples/mars3d-native-slices.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc-draw/m4-w-fast/vertical-section/examples/mars3d-native-slices.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc-draw/m4-w-fast/vertical-section/examples/mars3d-wall.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc-draw/m4-w-fast/vertical-section/examples/mars3d-wall.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc-draw/m4-w-fast/vertical-section/examples/volume-scene.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc-draw/m4-w-fast/vertical-section/examples/volume-scene.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc-draw/m4-w-fast/vertical-section/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc-draw/m4-w-fast/vertical-section/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc-draw/m4-w-fast/vertical-section/leaflet-2d.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc-draw/m4-w-fast/vertical-section/leaflet-2d.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc-draw/m4-w-fast/vertical-section/mars3d-native-slices.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc-draw/m4-w-fast/vertical-section/mars3d-native-slices.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc-draw/m4-w-fast/vertical-section/mars3d-wall.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc-draw/m4-w-fast/vertical-section/mars3d-wall.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc-draw/m4-w-fast/vertical-section/picking.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc-draw/m4-w-fast/vertical-section/picking.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc-draw/m4-w-fast/vertical-section/volume-scene.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc-draw/m4-w-fast/vertical-section/volume-scene.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc-draw/m4-w-fast/vertical-section/webgl2.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc-draw/m4-w-fast/vertical-section/webgl2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hashmap.json" beforeDir="false" afterPath="$PROJECT_DIR$/hashmap.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -44,61 +194,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0" />
-      <entry key="S2" value="1.000000777373136" />
-      <entry key="S5" value="1.0105402641135182" />
-      <entry key="S10" value="1.3272214219443994" />
-      <entry key="S30" value="4.690499875288193" />
-      <entry key="S60" value="7.897750119209622" />
-      <entry key="M2" value="10.536057712358199" />
-      <entry key="M5" value="16.21937815926588" />
-      <entry key="M10" value="33.856795688789866" />
-      <entry key="M15" value="53.23181946606211" />
-      <entry key="M30" value="94.51948480025645" />
-      <entry key="H1" value="131.92581038960992" />
-      <entry key="H2" value="158.23410441440117" />
-      <entry key="H4" value="174.28329292850495" />
-      <entry key="D1" value="189.66121678754925" />
-      <entry key="W1" value="192.51711173032604" />
+      <entry key="MS100" value="1.9628777268536854" />
+      <entry key="MS500" value="2.727896713844049" />
+      <entry key="S2" value="2.9281958841569375" />
+      <entry key="S5" value="2.9813444760710586" />
+      <entry key="S10" value="3.310186478816855" />
+      <entry key="S30" value="6.676348094103836" />
+      <entry key="S60" value="9.886633737608431" />
+      <entry key="M2" value="12.528837205146544" />
+      <entry key="M5" value="18.215058286739698" />
+      <entry key="M10" value="35.852414822572136" />
+      <entry key="M15" value="55.22727240455485" />
+      <entry key="M30" value="96.51547825335503" />
+      <entry key="H1" value="133.92302205846843" />
+      <entry key="H2" value="160.23243417745883" />
+      <entry key="H4" value="176.28237360216016" />
+      <entry key="D1" value="191.66105011883715" />
+      <entry key="W1" value="194.517087563736" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="0.9659363289248456" />
-      <entry key="MS500" value="0.9930924954370359" />
-      <entry key="S2" value="0.9982686325973925" />
-      <entry key="S5" value="0.9993070929904525" />
-      <entry key="S10" value="0.9996534864594093" />
-      <entry key="S30" value="0.9998844821426083" />
-      <entry key="S60" value="0.9999422439720413" />
-      <entry key="M2" value="1.0000746656786146" />
-      <entry key="M5" value="1.0568996915809423" />
-      <entry key="M10" value="1.5666561591703942" />
-      <entry key="M15" value="2.273569192148756" />
-      <entry key="M30" value="3.954719834117127" />
-      <entry key="H1" value="5.636941587166559" />
-      <entry key="H2" value="6.961707738355873" />
-      <entry key="H4" value="7.855420192958067" />
-      <entry key="D1" value="8.787064224459264" />
-      <entry key="W1" value="8.96895910984395" />
+      <entry key="MS100" value="0.45375957765858044" />
+      <entry key="MS500" value="0.8538177143912449" />
+      <entry key="S2" value="0.9612609283887614" />
+      <entry key="S5" value="0.9843204683673259" />
+      <entry key="S10" value="0.9921292599088718" />
+      <entry key="S30" value="0.9973695065410156" />
+      <entry key="S60" value="0.9986838917571796" />
+      <entry key="M2" value="0.9994452081562022" />
+      <entry key="M5" value="1.0566335518034404" />
+      <entry key="M10" value="1.566458895524445" />
+      <entry key="M15" value="2.273378338970598" />
+      <entry key="M30" value="3.9545538425361326" />
+      <entry key="H1" value="5.636823286161196" />
+      <entry key="H2" value="6.961634686211118" />
+      <entry key="H4" value="7.855378977726112" />
+      <entry key="D1" value="8.787056540557087" />
+      <entry key="W1" value="8.968957989420492" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.9659819481035758" />
-      <entry key="MS500" value="1.1285582412926334" />
-      <entry key="S2" value="1.6049460615822488" />
-      <entry key="S5" value="1.8279477540452933" />
-      <entry key="S10" value="2.220609153288776" />
-      <entry key="S30" value="5.614430728449746" />
-      <entry key="S60" value="8.840319077008507" />
-      <entry key="M2" value="11.49961905626945" />
-      <entry key="M5" value="17.257905222641064" />
-      <entry key="M10" value="35.408996509786256" />
-      <entry key="M15" value="55.491692470324736" />
-      <entry key="M30" value="98.46299456835278" />
-      <entry key="H1" value="137.55517769470632" />
-      <entry key="H2" value="165.19133516454164" />
-      <entry key="H4" value="182.13626459344596" />
-      <entry key="D1" value="198.44783940951075" />
-      <entry key="W1" value="201.4860068651844" />
+      <entry key="MS100" value="1.8761803804376322" />
+      <entry key="MS500" value="2.8203846262303722" />
+      <entry key="S2" value="3.5059527148993177" />
+      <entry key="S5" value="3.7845670405150322" />
+      <entry key="S10" value="4.195883075222038" />
+      <entry key="S30" value="7.597631953408628" />
+      <entry key="S60" value="10.827854910591237" />
+      <entry key="M2" value="13.491711231683235" />
+      <entry key="M5" value="19.253291493985593" />
+      <entry key="M10" value="37.4044040276333" />
+      <entry key="M15" value="57.48694492351933" />
+      <entry key="M30" value="100.45881710935925" />
+      <entry key="H1" value="139.55226852597482" />
+      <entry key="H2" value="167.18959057465437" />
+      <entry key="H4" value="184.13530339082465" />
+      <entry key="D1" value="200.44766494496716" />
+      <entry key="W1" value="203.48598156213382" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -272,7 +422,23 @@
       <option name="project" value="LOCAL" />
       <updated>1785828410739</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="1.3.2">
+      <option name="closed" value="true" />
+      <created>1785828676495</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1785828676495</updated>
+    </task>
+    <task id="LOCAL-00014" summary="1.3.2">
+      <option name="closed" value="true" />
+      <created>1785828725299</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1785828725299</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
