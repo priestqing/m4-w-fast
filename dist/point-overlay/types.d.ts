@@ -19,6 +19,8 @@ export interface IPointDataItem {
 }
 export interface IPointLabelPartOptions {
     position?: PointLabelPosition;
+    /** 默认固定颜色；value 模式按点的原始数值使用图层色标。 */
+    colorMode?: PointColorMode;
     color?: string;
     font?: string;
 }

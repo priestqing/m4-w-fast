@@ -1,0 +1,57 @@
+import type { RadarProductType, RadarRadialProductBase } from '../../types';
+import type { IPrecipitationRadarParameters, IQpeBiasData } from '../precipitation/types';
+export type IOhpBiasData = IQpeBiasData;
+export interface IOhpAdaptationData {
+    minimumReflectivity: number;
+    maximumReflectivity: number;
+    lowReflectivity: number;
+    innerRangeLimit: number;
+    outerRangeLimit: number;
+    maximumBiScanRange: number;
+    minimumEchoArea: number;
+    minimumAreaWeightedReflectivity: number;
+    maximumAreaReductionPercent: number;
+    accumulationCoefficient: number;
+    powerCoefficient: number;
+    minimumConversionReflectivity: number;
+    maximumConversionReflectivity: number;
+    minimumBiScanRange: number;
+    maximumStormSpeed: number;
+    maximumScanInterval: number;
+    minimumContinuityArea: number;
+    precipitationChangeRate1: number;
+    precipitationChangeRate2: number;
+    maximumEchoAreaChangeRate: number;
+    rangeEffectCutoff: number;
+    rangeEffectCoefficient1: number;
+    rangeEffectCoefficient2: number;
+    rangeEffectCoefficient3: number;
+    minimumPrecipitationRate: number;
+    maximumPrecipitationRate: number;
+    restartTime: number;
+    maximumInterpolationTime: number;
+    minimumAccumulationTime: number;
+    hourlyOutlierLimit: number;
+    gageAccumulationEndTime: number;
+    maximumScanAccumulation: number;
+    maximumHourlyAccumulation: number;
+    biasUpdateDelay: number;
+    minimumGageRadarPairs: number;
+    biasResetValue: number;
+    errorVarianceResetValue: number;
+    maximumErrorVariance: number;
+    gageTimeDifferenceThreshold: number;
+    maximumBiasResetTime: number;
+    systemNoise: number;
+    varianceAdjustmentFactor: number;
+    gageDiscardThreshold: number;
+    maximumGageAccumulation: number;
+    minimumBiasAccumulation: number;
+}
+export interface OhpRadarProduct extends RadarRadialProductBase {
+    kind: 'ohp';
+    productType: RadarProductType.OHP;
+    parameters: IPrecipitationRadarParameters;
+    bias: IOhpBiasData;
+    adaptation: IOhpAdaptationData;
+}

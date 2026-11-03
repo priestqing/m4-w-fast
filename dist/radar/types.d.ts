@@ -1,9 +1,20 @@
 import type { RasterColorStop, RasterLeafletLayerCreateOptions, RasterRendererCreateOptions, RasterRendererType } from '../raster-overlay';
 import type { GridData } from '../shared/visualization';
+import type { OhpRadarProduct } from './products/ohp/types';
+import type { ThpRadarProduct } from './products/thp/types';
+import type { StiRadarProduct } from './products/sti/types';
 export declare const RADAR_MAGIC_NUMBER = 1297371986;
 export declare enum RadarProductType {
     PPI = 1,
+    CAPPI = 3,
+    ET = 6,
     CR = 18,
+    VIL = 23,
+    HSR = 24,
+    OHP = 25,
+    THP = 26,
+    STI = 37,
+    QPE = 52,
     /** 厂商扩展标识，默认注册表不推断其数据结构。 */
     CRX = 54
 }
@@ -181,7 +192,7 @@ export interface IRadarProjectedGrid {
     minY: number;
     maxY: number;
 }
-interface RadarProductBase {
+export interface RadarProductBase {
     metadata: RadarMetadata;
     dataType: number;
     noData: number;
@@ -196,14 +207,37 @@ export interface CrRadarProduct extends RadarProductBase {
     grid: GridData;
     storms: IRadarStormAttribute[];
 }
-export interface PpiRadarProduct extends RadarProductBase {
-    kind: 'ppi';
-    productType: RadarProductType.PPI;
-    header: RadarRadialHeader;
+export interface RadarRadialProductBase extends RadarProductBase {
     elevation: number;
+    header: RadarRadialHeader;
     radials: RadarRadial[];
 }
-export type RadarProduct = CrRadarProduct | PpiRadarProduct;
+export type VilRadarProduct = RadarProductBase & {
+    kind: 'vil';
+    productType: RadarProductType.VIL;
+    header: RadarGridHeader;
+    encodedValues: RadarEncodedValues;
+    projectedGrid: IRadarProjectedGrid;
+    /** 供现有经纬度规则栅格渲染器使用的局部近似。 */
+    grid: GridData;
+};
+export type EtRadarProduct = RadarProductBase & {
+    kind: 'et';
+    productType: RadarProductType.ET;
+    /** 计算回波顶时使用的反射率等值线，单位为 dBZ。 */
+    reflectivityContour: number;
+    header: RadarGridHeader;
+    encodedValues: RadarEncodedValues;
+    projectedGrid: IRadarProjectedGrid;
+    /** 高度值使用标准 HGT 数据类型，单位由产品层解释为千米。 */
+    grid: GridData;
+};
+export interface PpiRadarProduct extends RadarRadialProductBase {
+    kind: 'ppi';
+    productType: RadarProductType.PPI;
+}
+export type RadarGridProduct = CrRadarProduct | EtRadarProduct | VilRadarProduct;
+export type RadarProduct = RadarGridProduct | OhpRadarProduct | PpiRadarProduct | StiRadarProduct | ThpRadarProduct;
 export type RadarBufferSource = ArrayBuffer | ArrayBufferView;
 export type RadarSource = RadarBufferSource | Blob | string | URL;
 export interface RadarParseOptions {
@@ -225,4 +259,3 @@ export interface RadarLeafletLayerCreateOptions extends Omit<RasterLeafletLayerC
     rendererType: RasterRendererType;
     ppi?: PpiRasterizeOptions;
 }
-export {};

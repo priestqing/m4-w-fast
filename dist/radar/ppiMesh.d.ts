@@ -1,5 +1,5 @@
 import type { GridData } from '../shared/visualization';
-import type { PpiRadarProduct } from './types';
+import type { RadarRadialProductBase } from './types';
 export declare const PPI_VERTEX_FLOAT_COUNT = 4;
 export interface PpiMesh {
     vertices: Float32Array<ArrayBuffer>;
@@ -8,4 +8,6 @@ export interface PpiMesh {
     valueGrid: GridData;
 }
 /** 将每个有效 PPI 距离库构造成独立扇形四边形，并拆分成两个三角形。 */
-export declare const createPpiMesh: (product: PpiRadarProduct) => PpiMesh;
+export declare const createPpiMesh: (product: RadarRadialProductBase) => PpiMesh;
+/** 供 PPI、OHP 等标准径向产品共用的语义化名称。 */
+export declare const createRadarRadialMesh: (product: RadarRadialProductBase) => PpiMesh;
